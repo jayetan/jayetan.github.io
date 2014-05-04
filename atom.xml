@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-05-04T17:59:20+08:00</updated>
+  <updated>2014-05-04T18:33:27+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,5 +12,216 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Parallax Scrolling]]></title>
+    <link href="http://jayetan.github.io/blog/2014/04/07/parallax-scrolling/"/>
+    <updated>2014-04-07T18:27:59+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/04/07/parallax-scrolling</id>
+    <content type="html"><![CDATA[<p>Today I created a Simple Parallax Scrolling that scrolls different elements with different speed upwards, at first it looks intimidating but its simple to create probably the most challenging part of the parallax is how you can make it scroll smoothly, but you can achieve it by using some plug-ins
+These are the part of my codes:</p>
+
+<p>Html</p>
+
+<pre>
+&#60;div class="small-clouds-layer">
+    &#60;img src="blue-clouds-1.png" class="small-1">
+    &#60;img src="blue-clouds-3.png" class="small-3">
+&#60;/div>
+</pre>
+
+
+<p>Css</p>
+
+<pre>
+.small-clouds-layer{
+    position: absolute;
+    top: 600px;
+    width: 100%;
+}
+.small-1{
+    margin-left: 300px;
+}
+.small-3{
+    margin-left: 300px;
+}
+</pre>
+
+
+<p>Javascript</p>
+
+<pre>
+$(window).bind('scroll',function(e){
+    parallaxScroll();
+});
+
+function parallaxScroll(){
+    var scrolled = $(window).scrollTop();
+    $('.small-clouds-layer').css('top',(600-(scrolled*.5))+'px');
+}
+</pre>
+
+
+<p>the javascript code above is enough to make a parallax scrolling if you want to animate more elements just set it&rsquo;s css rules and add that elements inside parallaxScroll function</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Google Index]]></title>
+    <link href="http://jayetan.github.io/blog/2014/04/04/google-index/"/>
+    <updated>2014-04-04T18:28:48+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/04/04/google-index</id>
+    <content type="html"><![CDATA[<p>After making some blogs, I searched for Boinx and Bryan&rsquo;s blogs to see if Google already indexed their site by typing in the browser <code>site:<a href="http://urlOfTheSite">http://urlOfTheSite</a></code> since I&rsquo;m thinking their site is already running since Dec. 2013 it should be indexed by now, but Google bots doesn&rsquo;t able to pick thier site. so I linked their sites to my Octopress site and submitted my site to Google Index via Google Webmaster tools <code><a href="https://www.google.com/webmasters/"><a href="https://www.google.com/webmasters/">https://www.google.com/webmasters/</a></a></code> afterward I have to download the html verification file and uploaded it to my site server and click the verify button. after an hour I checked again my site and my friend&rsquo;s site and now its already indexed by Google, hoping it will gain some rankings after some time for a chance to be read by other viewers.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Creating Static Punch Web Page]]></title>
+    <link href="http://jayetan.github.io/blog/2014/04/04/creating-static-punch-web-page/"/>
+    <updated>2014-04-04T18:17:11+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/04/04/creating-static-punch-web-page</id>
+    <content type="html"><![CDATA[<p>Installation</p>
+
+<p>Download and install Node.js: <a href="http://nodejs.org/#download"><a href="http://nodejs.org/#download">http://nodejs.org/#download</a></a>
+Using terminal, enter the following command:</p>
+
+<pre><code>sudo npm install -g punch</code></pre>
+
+
+<p>After the installation, create your folder by typing:</p>
+
+<pre><code>punch setup myFolderName</code></pre>
+
+
+<p>Go to the myFolderName/default directory and start the server by typing:</p>
+
+<pre><code>punch s</code></pre>
+
+
+<p>then open your browser and visit: <a href="http://localhost:9009"><a href="http://localhost:9009">http://localhost:9009</a></a></p>
+
+<p>You will now see the Punch tutorial on how to add and edit your webpage. just follow the instruction and you&rsquo;ll be able to
+create your first webpage easily</p>
+
+<hr />
+
+
+<p>Punch Structure (Folders and files)</p>
+
+<p>config.json &ndash;> this is where you can configure your punch settings.</p>
+
+<p>templates &ndash;> this where you can find the .mustache files by default is has three .mustache files:</p>
+
+<pre><code>_layout.mustache
+_header.mustahce
+_footer.mustache
+</code></pre>
+
+
+<p>you can add more if needed. here are the basic tag to include the .mustache file in one mustache file.</p>
+
+<pre><code>
+    &#123;&#123;&#62; header &#125&#125
+    &#123;&#123;&#62; home &#125&#125
+    &#123;&#123;&#62; footer &#125&#125</code>
+</pre>
+
+
+<p>this is where you can also controll your site appearance and all your assets should be place ex. css folder, images, javascript.</p>
+
+<p>output &ndash;> all the output html files, assets,images, javascript resides here you cannot modify these files since it is automatically generated.</p>
+
+<p>contents &ndash;> this is where you can add contents/pages to your sites to add just create a folder name with underscore first then the name ex. _about then inside this folder create an intro.markdown file then type or paste your contents inside it.
+you can also add contents to your site by using the shared.json file open it and add your contents ex.</p>
+
+<pre><code>"navbar": [
+        { "label": "HOME", "href": "/" },
+        { "label": "ABOUT", "href": "/about" }]</code>
+</pre>
+
+
+<p>and to include this just open your .mustache file in templates directory and use this ex. code</p>
+
+<pre><code>
+    &#60;nav>
+        &#60;ul>
+            &#123;&#123;#navbar}}
+                &#60;li>&#60;a class="navLinks" href="&#123;&#123;{href}}}">&#60;/a>&#60;/li>
+            &#123;&#123;/navbar}}
+        &#60;/ul>
+    &#60;/nav>
+</code></pre>
+
+
+<p>this will create an navigation links to your site.</p>
+
+<hr />
+
+
+<p>Problems Encountered(Ubuntu)</p>
+
+<p>If you follow the punch installation guide these are the possible errors you may encounter</p>
+
+<p>Installation &ndash;>  you will receive an error using this command <code>npm install -g punch</code>
+The solution, use <code>sudo npm install -g punch</code></p>
+
+<p>Running punch server &ndash;> if you follow the instruction <code>Go to the mysite directory and start the server: cd mysite; punch s</code> the punch server won&rsquo;t run.
+The solution, access the default folder where you can find the config.json and run <code>punch s</code> in the terminal</p>
+
+<p>Contents Rendering &lt;&ndash; if you paste a big chunck of html codes in your intro.markdown it will be generated by punch as a plain text in the output.
+The solution, use the tag with three parentheses to get the unescaped output (&#123;&#123;&#123;intro}}} instead of &#123;&#123;intro}}) or try to paste smaller pieces of html codes and refresh your browser each time.</p>
+
+<p><small>tags: ubuntu punch install, punch s error, punch render problem, ubuntu punch laktek error, punch error solutions, punch displays as plain text </small></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Creating Jekyll Static Webpage]]></title>
+    <link href="http://jayetan.github.io/blog/2014/04/02/creating-jekyll-static-webpage/"/>
+    <updated>2014-04-02T18:10:38+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/04/02/creating-jekyll-static-webpage</id>
+    <content type="html"><![CDATA[<p>How to create Jekyll Static Webpage</p>
+
+<p>First we have to install the jekyll gem by typing in the terminal
+<code>gem install jekyll</code>
+then we have to create a new folder which the jekyll will generate all the needed files and folder by typing in the terminal <code>jekyll new my-folder-name</code>
+then you can access the folder by typing <code>cd my-folder-name</code> then <code>ls</code> to see all the generated files and folders</p>
+
+<p>_includes &ndash;> this is where you will put your reusable html file (parts of your html codes)</p>
+
+<p>_layouts &ndash;> this is where you can find the default.html which will be called by the index.html (can be found at the root folder.)</p>
+
+<p>_post &ndash;> this where you can find all of your created blogs</p>
+
+<p><em>_site &ndash;> this is where you can find the generated html file which are rendered by the browser , all the contents inside here should be generated by the jekyll. To add a page inside </em>site folder we should create an html page in the root folder manually, so if we want to create contact.html it should be placed in the root folder of my-folder-name then open the contact.html and before the
+<code>
+html code block we should put
+&#8209;&#8209;&#8209;
+layout: contact
+&#8209;&#8209;&#8209;
+</code></p>
+
+<p>then on the terminal type <code>jekyll build &mdash;watch</code> this will now create contact.html in the <em>site folder and any changes will automatically update the </em>site folder and to add folder in <em>site folder same rules applies the folder should be placed at the root folder, lets say we want to create css folder it should be place in the root folder since the jekyll is running it should create the css folder in the </em>site folder if not you can type in the terminal <code>jekyll build</code></p>
+
+<p>INCLUDING REUSABLE HTML CODES</p>
+
+<p>All the includes file should be placed in the _includes to be accessible and to include this file we can add inside our html file the code <code>&#123;&#37;include &ldquo;name of the file&rdquo; param=&ldquo;value&rdquo; &#37;&#125; ex. &#123;&#37; include footer.html param=&ldquo;value&rdquo; &#37;&#125;</code></p>
+
+<p>To run the webpage locally just type <code>jekyll serve or jekyll serve &mdash;watch</code> then browse to <a href="http://localhost:4000"><a href="http://localhost:4000">http://localhost:4000</a></a></p>
+
+<p>example of the webpage I built using jekyll <a href="http://jayetan.github.io/business-sample/"><a href="http://jayetan.github.io/business-sample/">http://jayetan.github.io/business-sample/</a></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Just Finished Setting Up My Octopress Blog]]></title>
+    <link href="http://jayetan.github.io/blog/2014/03/27/just-finished-setting-up-my-octopress-blog/"/>
+    <updated>2014-03-27T18:05:51+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/03/27/just-finished-setting-up-my-octopress-blog</id>
+    <content type="html"><![CDATA[<p>Adding this page content was not really easy for me probably because I really don&rsquo;t read the documentation, I was relying on experimentationand testing, I thought pushing new contents was same as in github using
+<code>git add. git commit and git push</code> Octopress is different you have to use <code>rake generate and rake deploy</code> to update your contents.
+Sometime this week I&rsquo;ll be adding more pages for my blogs about what I have learned from this wonderfull company from the day I start training, I couldn&rsquo;t really remember when is the day I started but its before Feb. 26 so I could say that I&rsquo;ve training for one month now and so far it really helps me to learn the things I need to learn.</p>
+]]></content>
+  </entry>
   
 </feed>

@@ -5,14 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Jaye Tan's Octopress Blog</title>
+  <title>Parallax Scrolling - Jaye Tan's Octopress Blog</title>
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="Blog Archive 2014 Parallax Scrolling
-Apr 07 2014 Google Index
-Apr 04 2014 Creating Static Punch Web Page
-Apr 04 2014 Creating Jekyll Static Webpage &hellip;">
+  <meta name="description" content="Today I created a Simple Parallax Scrolling that scrolls different elements with different speed upwards, at first it looks intimidating but its &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +18,7 @@ Apr 04 2014 Creating Jekyll Static Webpage &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jayetan.github.io/blog/archives">
+  <link rel="canonical" href="http://jayetan.github.io/blog/2014/04/07/parallax-scrolling">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Jaye Tan's Octopress Blog" type="application/atom+xml">
@@ -69,71 +66,122 @@ Apr 04 2014 Creating Jekyll Static Webpage &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Parallax Scrolling</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-07T18:27:59+08:00" pubdate data-updated="true">Apr 7<span>th</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>Today I created a Simple Parallax Scrolling that scrolls different elements with different speed upwards, at first it looks intimidating but its simple to create probably the most challenging part of the parallax is how you can make it scroll smoothly, but you can achieve it by using some plug-ins
+These are the part of my codes:</p>
 
-  
-  <h2>2014</h2>
+<p>Html</p>
 
-<article>
-  
-<h1><a href="/blog/2014/04/07/parallax-scrolling/">Parallax Scrolling</a></h1>
-<time datetime="2014-04-07T18:27:59+08:00" pubdate><span class='month'>Apr</span> <span class='day'>07</span> <span class='year'>2014</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/04/04/google-index/">Google Index</a></h1>
-<time datetime="2014-04-04T18:28:48+08:00" pubdate><span class='month'>Apr</span> <span class='day'>04</span> <span class='year'>2014</span></time>
+<pre>
+&#60;div class="small-clouds-layer">
+    &#60;img src="blue-clouds-1.png" class="small-1">
+    &#60;img src="blue-clouds-3.png" class="small-3">
+&#60;/div>
+</pre>
 
 
-</article>
+<p>Css</p>
+
+<pre>
+.small-clouds-layer{
+    position: absolute;
+    top: 600px;
+    width: 100%;
+}
+.small-1{
+    margin-left: 300px;
+}
+.small-3{
+    margin-left: 300px;
+}
+</pre>
 
 
+<p>Javascript</p>
 
-<article>
-  
-<h1><a href="/blog/2014/04/04/creating-static-punch-web-page/">Creating Static Punch Web Page</a></h1>
-<time datetime="2014-04-04T18:17:11+08:00" pubdate><span class='month'>Apr</span> <span class='day'>04</span> <span class='year'>2014</span></time>
+<pre>
+$(window).bind('scroll',function(e){
+    parallaxScroll();
+});
 
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/04/02/creating-jekyll-static-webpage/">Creating Jekyll Static Webpage</a></h1>
-<time datetime="2014-04-02T18:10:38+08:00" pubdate><span class='month'>Apr</span> <span class='day'>02</span> <span class='year'>2014</span></time>
+function parallaxScroll(){
+    var scrolled = $(window).scrollTop();
+    $('.small-clouds-layer').css('top',(600-(scrolled*.5))+'px');
+}
+</pre>
 
 
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/03/27/just-finished-setting-up-my-octopress-blog/">Just Finished Setting Up My Octopress Blog</a></h1>
-<time datetime="2014-03-27T18:05:51+08:00" pubdate><span class='month'>Mar</span> <span class='day'>27</span> <span class='year'>2014</span></time>
-
-
-</article>
-
+<p>the javascript code above is enough to make a parallax scrolling if you want to animate more elements just set it&rsquo;s css rules and add that elements inside parallaxScroll function</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-07T18:27:59+08:00" pubdate data-updated="true">Apr 7<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://jayetan.github.io/blog/2014/04/07/parallax-scrolling/" data-via="" data-counturl="http://jayetan.github.io/blog/2014/04/07/parallax-scrolling/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/04/04/google-index/" title="Previous Post: Google index">&laquo; Google index</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
