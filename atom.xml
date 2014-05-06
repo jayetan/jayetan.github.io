@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-05-04T19:02:38+08:00</updated>
+  <updated>2014-05-06T10:35:43+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Installing GVM]]></title>
+    <link href="http://jayetan.github.io/blog/2014/05/06/installing-gvm/"/>
+    <updated>2014-05-06T10:06:53+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/05/06/installing-gvm</id>
+    <content type="html"><![CDATA[<p>Installing GVM (Grails Version Manager)</p>
+
+<p>To install GVM we need to install Curl first via terminal <code>sudo apt-get install curl</code>
+then we could follow the instructions in the <code><a href="http://gvmtool.net/">http://gvmtool.net/</a></code></p>
+
+<p><code>curl -s get.gvmtool.net | bash</code></p>
+
+<p>after the GVM is installed type this in the terminal <code>gvm help</code>
+we should see the list of candidates:
+<code>candidate  :  gaiden, gradle, grails, griffon, groovy, groovyserv, lazybones, springboot, vertx</code>
+if you are not able to see the candidates list you need to un install the GVM and install it again</p>
+
+<p>how to uninstall GVM</p>
+
+<p>we need to delete this <code>#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s &ldquo;~/.gvm/bin/gvm-init.sh&rdquo; &amp;&amp; ! $(which gvm-init.sh) ]] &amp;&amp; source &ldquo;~/.gvm/bin/gvm-init.sh&rdquo;</code> lines in the</p>
+
+<p><code>~/.bash_profile (or ~/.profile)</code>
+<code>~/.bashrc</code>
+and
+<code>~/.zshrc</code></p>
+
+<p>just use your text editor to open the file and delete it ex. <code>sudo gedit ~/.bash_profile</code>
+then delete the <code>~/.gvm</code> directory <code>rm -rf ~/.gvm</code></p>
+
+<p>if your GVM installed properly you can now install Grails by typing
+<code>gvm install grails [version]</code> ex. <code>gvm install grails 2.1.1</code>
+to see the list of available grails type <code>gvm list grails</code>
+if you see a note saying that your gvm is in offline mode just put it online by typing <code>gvm offline disable</code></p>
+
+<p><small>NOTE: you might think that the code I posted above is not working due to constant errors that you will receive, this is normal, I repeat the steps above numerous times before it installed perfectly, especially in installing the grails, you have to put you gvm in online mode repeatedly because it automatically turns offline when installation fails.</small></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Parallax Scrolling]]></title>

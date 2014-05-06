@@ -9,7 +9,8 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="Today I created a Simple Parallax Scrolling that scrolls different elements with different speed upwards, at first it looks intimidating but its &hellip;">
+  <meta name="description" content="Installing GVM (Grails Version Manager) To install GVM we need to install Curl first via terminal sudo apt-get install curl
+then we could follow the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +68,72 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/06/installing-gvm/">Installing GVM</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-06T10:06:53+08:00" pubdate data-updated="true">May 6<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Installing GVM (Grails Version Manager)</p>
+
+<p>To install GVM we need to install Curl first via terminal <code>sudo apt-get install curl</code>
+then we could follow the instructions in the <code><a href="http://gvmtool.net/">http://gvmtool.net/</a></code></p>
+
+<p><code>curl -s get.gvmtool.net | bash</code></p>
+
+<p>after the GVM is installed type this in the terminal <code>gvm help</code>
+we should see the list of candidates:
+<code>candidate  :  gaiden, gradle, grails, griffon, groovy, groovyserv, lazybones, springboot, vertx</code>
+if you are not able to see the candidates list you need to un install the GVM and install it again</p>
+
+<p>how to uninstall GVM</p>
+
+<p>we need to delete this <code>#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s &ldquo;~/.gvm/bin/gvm-init.sh&rdquo; &amp;&amp; ! $(which gvm-init.sh) ]] &amp;&amp; source &ldquo;~/.gvm/bin/gvm-init.sh&rdquo;</code> lines in the</p>
+
+<p><code>~/.bash_profile (or ~/.profile)</code>
+<code>~/.bashrc</code>
+and
+<code>~/.zshrc</code></p>
+
+<p>just use your text editor to open the file and delete it ex. <code>sudo gedit ~/.bash_profile</code>
+then delete the <code>~/.gvm</code> directory <code>rm -rf ~/.gvm</code></p>
+
+<p>if your GVM installed properly you can now install Grails by typing
+<code>gvm install grails [version]</code> ex. <code>gvm install grails 2.1.1</code>
+to see the list of available grails type <code>gvm list grails</code>
+if you see a note saying that your gvm is in offline mode just put it online by typing <code>gvm offline disable</code></p>
+
+<p><small>NOTE: you might think that the code I posted above is not working due to constant errors that you will receive, this is normal, I repeat the steps above numerous times before it installed perfectly, especially in installing the grails, you have to put you gvm in online mode repeatedly because it automatically turns offline when installation fails.</small></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -427,6 +494,10 @@ Sometime this week I&rsquo;ll be adding more pages for my blogs about what I hav
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/05/06/installing-gvm/">Installing GVM</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/04/07/parallax-scrolling/">Parallax Scrolling</a>
       </li>
     
@@ -440,10 +511,6 @@ Sometime this week I&rsquo;ll be adding more pages for my blogs about what I hav
     
       <li class="post">
         <a href="/blog/2014/04/02/creating-jekyll-static-webpage/">Creating Jekyll Static Webpage</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/27/just-finished-setting-up-my-octopress-blog/">Just Finished Setting Up My Octopress Blog</a>
       </li>
     
   </ul>
