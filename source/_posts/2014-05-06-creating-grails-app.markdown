@@ -102,18 +102,18 @@ just like html tags grails uses opening and closing tags
 
 example of grails form
 <pre>
-<g:form controller="Persons" action="save" class="grails-form">
-            <label>First Name: </label>
-            <g:textField name="firstName"/><br/>
+&#60;g:form controller="Persons" action="save" class="grails-form">
+            &#60;label>First Name: </label>
+            &#60;g:textField name="firstName"/><br/>
 
-            <label>Last Name: </label>
-            <g:textField name="lastName"/><br/>
+            &#60;label>Last Name: </label>
+            &#60;g:textField name="lastName"/><br/>
 
-            <label>Age: </label>
-            <g:textField name="age"/><br/>
+            &#60;label>Age: </label>
+            &#60;g:textField name="age"/><br/>
 
-            <g:actionSubmit value="Save"/>
-</g:form>
+            &#60;g:actionSubmit value="Save"/>
+&#60;/g:form>
 </pre>
 
 example of grails input field
@@ -124,16 +124,16 @@ example of grails submit button
 
 example of looping data to display database content
 <pre>
-	<table border="1">
-		<g:each in="${viewRecords}" status="i" var="thisRecord">
-			<tr>
-				<td>${thisRecord.id}</td>
-				<td>${thisRecord.firstName}</td>
-				<td>${thisRecord.lastName}</td>
-				<td>${thisRecord.age}</td>
-			</tr>
-		</g:each>
-	</table>
+	&#60;table border="1">
+		&#60;g:each in="${viewRecords}" status="i" var="thisRecord">
+			&#60;tr>
+				&#60;td>${thisRecord.id}</td>
+				&#60;td>${thisRecord.firstName}</td>
+				&#60;td>${thisRecord.lastName}</td>
+				&#60;td>${thisRecord.age}</td>
+			&#60;/tr>
+		&#60;/g:each>
+	&#60;/table>
 </pre>
 
 Basic Controller Functions
