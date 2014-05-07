@@ -4,7 +4,6 @@ title: "Creating Grails App"
 date: 2014-05-06 11:52:43 +0800
 comments: true
 categories: 
-published: false
 ---
 
 Creating Grails App
@@ -74,7 +73,102 @@ update - Create the database if it doesn't exist, and modify it if it does exist
 </small>
 
 
+MVC Model View Controll
+
+Grails uses MVC architecture pattern to implement user interface
+
+
+Syntax in creating Domain (Model)
+
+<code>grails create-domain-class className</code> ex. <code>grails create-domain-class book</code>
+
+
+Syntax in creating Controller
+
+<code>grails create-controller controllerName</code> ex. <code>grails create-controller bookController</code>
+
+
+For creating the View
+
+we could simply create a file with .gsp extension name inside the "projectName"/Grails-app/views directory
+ex. <code>books.gsp</code>
+
+
+
 
 Basic Grails/Groovy Syntax
 
 just like html tags grails uses opening and closing tags
+
+example of grails form
+<pre>
+<g:form controller="Persons" action="save" class="grails-form">
+            <label>First Name: </label>
+            <g:textField name="firstName"/><br/>
+
+            <label>Last Name: </label>
+            <g:textField name="lastName"/><br/>
+
+            <label>Age: </label>
+            <g:textField name="age"/><br/>
+
+            <g:actionSubmit value="Save"/>
+</g:form>
+</pre>
+
+example of grails input field
+<code><g:textField name="lastName"/></code>
+
+example of grails submit button
+<code><g:actionSubmit value="Save"/></code>
+
+example of looping data to display database content
+<pre>
+	<table border="1">
+		<g:each in="${viewRecords}" status="i" var="thisRecord">
+			<tr>
+				<td>${thisRecord.id}</td>
+				<td>${thisRecord.firstName}</td>
+				<td>${thisRecord.lastName}</td>
+				<td>${thisRecord.age}</td>
+			</tr>
+		</g:each>
+	</table>
+</pre>
+
+Basic Controller Functions
+
+Inserting Data to MySQL Database
+
+<pre>
+    def save() {
+        def users = new Persons(params)
+        users.save()
+        render "Success!"
+        redirect(action:"view")
+    }
+</pre>
+
+Pulling data from MySql database
+<pre>
+    def view = {
+    	def viewUsers = Persons.list();
+    	[viewRecords: viewUsers];
+    }
+</pre>
+
+Deleteing data from MySql database with if else statement
+<pre>
+    def delete = {
+    	def deleteUser = Persons.get(params.idNum)
+
+    	if(!deleteUser){
+    		render "User Id don't exist!"
+    	}else{
+	    	deleteUser.delete()
+	    	render "Deleted!"
+    	}
+    	
+    }
+</pre>
+
