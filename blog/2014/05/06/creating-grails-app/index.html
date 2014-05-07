@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Creating Grails App - Jaye Tan's Octopress Blog</title>
+  <meta name="author" content="Jaye Tan">
+
+  
+  <meta name="description" content="Creating Grails App Before we can create an Grails application, we need to install Java Development kit in our computer by typing
+sudo apt-get &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jayetan.github.io/blog/2014/05/06/creating-grails-app">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Jaye Tan's Octopress Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jaye Tan's Octopress Blog</a></h1>
+  
+    <h2>Just Blogs</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:jayetan.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="http://bryangamotea.github.io/">Bryan's Blogs</a></li>
+  <li><a href="http://boinx25.github.io/">Boinx's Blogs</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Creating Grails App</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-06T11:52:43+08:00" pubdate data-updated="true">May 6<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Creating Grails App</p>
+
+<p>Before we can create an Grails application, we need to install Java Development kit in our computer by typing
+<code>sudo apt-get install oracle-java6-installer</code>
+(this will also fixed the JAVA_HOME was NOT set error in your terminal, if you have installed the GVM first.)</p>
+
+<p>after installation we can now create our grails application by typing
+<code>grails create-app name</code> ex. <code>grails create-app sampleProject</code></p>
+
+<p>then <code>cd sampleProject</code> then to run the grails project simply type <code>grails run-app</code>
+then browse to <code><a href="http://localhost:8080/sampleProject/">http://localhost:8080/sampleProject/</a></code>
+you will now able to see your first grails app.</p>
+
+<p>Configuring Database to use mySQL as default Database</p>
+
+<p>By default Grails uses H2 as its database but we can change this by simply going to your Grails Project then open <code>grails-app/conf/</code> directory then open <code>DataSource.groovy</code></p>
+
+<p>change</p>
+
+<pre>
+dataSource {
+    pooled = true
+    driverClassName = "org.h2.Driver"
+    username = "sa"
+    password = ""
+}
+</pre>
+
+
+<p>to</p>
+
+<pre>
+dataSource {
+    pooled = true
+    driverClassName = "com.mysql.jdbc.Driver"
+    username = "root"
+    password = ""
+}
+</pre>
+
+
+<p>and change all</p>
+
+<pre>
+dbCreate = "update"
+url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+</pre>
+
+
+<p>to</p>
+
+<pre>
+dbCreate = "update"
+url = "jdbc:mysql://localhost/testing"
+</pre>
+
+
+<p>Then open <code>BuildConfig.groovy</code> find and uncomment the line <code>runtime &lsquo;mysql:mysql-connector-java:5.1.16&rsquo;</code></p>
+
+<p><small>
+NOTE: dbCreate dictates what grails will do to the database, these are the following definition you can use:</p>
+
+<p>create-drop &ndash; Drop and re-create the database when Grails is run
+create &ndash; Create the database if it doesn&rsquo;t exist, but don&rsquo;t modify it if it does. Deletes existing data.
+update &ndash; Create the database if it doesn&rsquo;t exist, and modify it if it does exist</p>
+
+<p><code>-Both create-drop and create will destroy all existing data-</code>
+</small></p>
+
+<p>MVC Model View Controll</p>
+
+<p>Grails uses MVC architecture pattern to implement user interface</p>
+
+<p>Syntax in creating Domain (Model)</p>
+
+<p><code>grails create-domain-class className</code> ex. <code>grails create-domain-class book</code></p>
+
+<p>Syntax in creating Controller</p>
+
+<p><code>grails create-controller controllerName</code> ex. <code>grails create-controller bookController</code></p>
+
+<p>For creating the View</p>
+
+<p>we could simply create a file with .gsp extension name inside the &ldquo;projectName&rdquo;/Grails-app/views directory
+ex. <code>books.gsp</code></p>
+
+<p>Basic Grails/Groovy Syntax</p>
+
+<p>just like html tags grails uses opening and closing tags</p>
+
+<p>example of grails form</p>
+
+<pre>
+<g:form controller="Persons" action="save" class="grails-form">
+            <label>First Name: </label>
+            <g:textField name="firstName"/><br/>
+
+            <label>Last Name: </label>
+            <g:textField name="lastName"/><br/>
+
+            <label>Age: </label>
+            <g:textField name="age"/><br/>
+
+            <g:actionSubmit value="Save"/>
+</g:form>
+</pre>
+
+
+<p>example of grails input field
+<code>&lt;g:textField name=&ldquo;lastName&rdquo;/></code></p>
+
+<p>example of grails submit button
+<code>&lt;g:actionSubmit value=&ldquo;Save&rdquo;/></code></p>
+
+<p>example of looping data to display database content</p>
+
+<pre>
+    <table border="1">
+        <g:each in="${viewRecords}" status="i" var="thisRecord">
+            <tr>
+                <td>${thisRecord.id}</td>
+                <td>${thisRecord.firstName}</td>
+                <td>${thisRecord.lastName}</td>
+                <td>${thisRecord.age}</td>
+            </tr>
+        </g:each>
+    </table>
+</pre>
+
+
+<p>Basic Controller Functions</p>
+
+<p>Inserting Data to MySQL Database</p>
+
+<pre>
+    def save() {
+        def users = new Persons(params)
+        users.save()
+        render "Success!"
+        redirect(action:"view")
+    }
+</pre>
+
+
+<p>Pulling data from MySql database</p>
+
+<pre>
+    def view = {
+        def viewUsers = Persons.list();
+        [viewRecords: viewUsers];
+    }
+</pre>
+
+
+<p>Deleteing data from MySql database with if else statement</p>
+
+<pre>
+    def delete = {
+        def deleteUser = Persons.get(params.idNum)
+
+        if(!deleteUser){
+            render "User Id don't exist!"
+        }else{
+            deleteUser.delete()
+            render "Deleted!"
+        }
+        
+    }
+</pre>
+
+
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jaye Tan</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-06T11:52:43+08:00" pubdate data-updated="true">May 6<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://jayetan.github.io/blog/2014/05/06/creating-grails-app/" data-via="" data-counturl="http://jayetan.github.io/blog/2014/05/06/creating-grails-app/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/05/06/installing-gvm/" title="Previous Post: Installing GVM">&laquo; Installing GVM</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/06/creating-grails-app/">Creating Grails App</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/06/installing-gvm/">Installing GVM</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/07/parallax-scrolling/">Parallax Scrolling</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/04/google-index/">Google Index</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/04/creating-static-punch-webpage/">Creating Static Punch Web Page</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Jaye Tan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
