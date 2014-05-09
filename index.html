@@ -9,8 +9,8 @@
   <meta name="author" content="Jaye Tan">
 
   
-  <meta name="description" content="Creating Grails App Before we can create an Grails application, we need to install Java Development kit in our computer by typing
-sudo apt-get &hellip;">
+  <meta name="description" content="Installing Drupal on Localhost In order to run Drupal locally we must have a Server that runs Apache, Php and MySQL,
+for windows you can install &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,97 @@ sudo apt-get &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/07/installing-drupal-locally/">Installing Drupal Locally</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-07T11:39:26+08:00" pubdate data-updated="true">May 7<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Installing Drupal on Localhost</p>
+
+<p>In order to run Drupal locally we must have a Server that runs Apache, Php and MySQL,
+for windows you can install software bundle called wamp
+for mac you can use mamp
+and for linux you can install lamp, but I recommend to install it individually, in my experience as a linux user installing a bundle package will cause you a lot of errors rather than installing it individually.</p>
+
+<p>Installing Apache, PHP MySQL and PHPmyadmin for LINUX</p>
+
+<p>Open terminal and type in these commands:</p>
+
+<p>APACHE</p>
+
+<p><code>sudo apt-get</code>
+<code>sudo apt-get install apache2</code>
+to test if the apache is working browse <code><a href="http://localhost">http://localhost</a></code></p>
+
+<p>MySQL
+<code>sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql</code>
+<code>sudo mysql_install_db</code>
+<code>sudo /usr/bin/mysql_secure_installation</code>
+prompt will appear asking for current password for root</p>
+
+<pre>Enter current password for root (enter for none): 
+OK, successfully used password, moving on...</pre>
+
+
+<p>for testing purposes I would recommend to not put password for root,
+a bunch of promt questions will follow along installation just type y to all.</p>
+
+<p>PHP</p>
+
+<p><code>sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt</code></p>
+
+<p>PHPmyadmin</p>
+
+<p><code>sudo apt-get install phpmyadmin</code></p>
+
+<p>after you installed the LAMP</p>
+
+<p>download the drupal at <code><a href="https://drupal.org/download">https://drupal.org/download</a></code>
+choose the .zip format and unzipped it after download to see the drupal folder
+use the terminal to move the drupal folder to var/www by typing <code>sudo mv Downloads/Drupal-7.27 /var/www</code></p>
+
+<p>Note: You may need to grant access to your /var/www folder to do this simply type the following:</p>
+
+<pre>
+sudo chmod -R 777 /var/www
+sudo chown -R **yourusername** /var/www
+</pre>
+
+
+<p>Next thing you must do is to setup the database for your drupal, browse <a href="http://localhost/phpmyadmin">http://localhost/phpmyadmin</a>
+and create a database for your drupal.</p>
+
+<p>then browse <a href="http://localhost/drupal">http://localhost/drupal</a> folder name ex. <a href="http://localhost/drupal-7.27">http://localhost/drupal-7.27</a> this will take you to the installation, just follow the instruction and you wil be able to install drupal.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -701,6 +792,10 @@ Sometime this week I&rsquo;ll be adding more pages for my blogs about what I hav
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/05/07/installing-drupal-locally/">Installing Drupal Locally</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/05/06/creating-grails-app/">Creating Grails App</a>
       </li>
     
@@ -714,10 +809,6 @@ Sometime this week I&rsquo;ll be adding more pages for my blogs about what I hav
     
       <li class="post">
         <a href="/blog/2014/04/04/google-index/">Google Index</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/04/creating-static-punch-webpage/">Creating Static Punch Web Page</a>
       </li>
     
   </ul>

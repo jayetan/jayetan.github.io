@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Google Index - Jaye Tan's Octopress Blog</title>
+  <title>Installing Drupal Locally - Jaye Tan's Octopress Blog</title>
   <meta name="author" content="Jaye Tan">
 
   
-  <meta name="description" content="After making some blogs, I searched for Boinx and Bryan&rsquo;s blogs to see if Google already indexed their site by typing in the browser site:http &hellip;">
+  <meta name="description" content="Installing Drupal on Localhost In order to run Drupal locally we must have a Server that runs Apache, Php and MySQL,
+for windows you can install &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jayetan.github.io/blog/2014/04/04/google-index">
+  <link rel="canonical" href="http://jayetan.github.io/blog/2014/05/07/installing-drupal-locally">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Jaye Tan's Octopress Blog" type="application/atom+xml">
@@ -70,7 +71,7 @@
   
   <header>
     
-      <h1 class="entry-title">Google Index</h1>
+      <h1 class="entry-title">Installing Drupal Locally</h1>
     
     
       <p class="meta">
@@ -86,14 +87,69 @@
   
 
 
-<time datetime="2014-04-04T18:28:48+08:00" pubdate data-updated="true">Apr 4<span>th</span>, 2014</time>
+<time datetime="2014-05-07T11:39:26+08:00" pubdate data-updated="true">May 7<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>After making some blogs, I searched for Boinx and Bryan&rsquo;s blogs to see if Google already indexed their site by typing in the browser <code>site:<a href="http://urlOfTheSite">http://urlOfTheSite</a></code> since I&rsquo;m thinking their site is already running since Dec. 2013 it should be indexed by now, but Google bots doesn&rsquo;t able to pick thier site. so I linked their sites to my Octopress site and submitted my site to Google Index via Google Webmaster tools <code><a href="https://www.google.com/webmasters/"><a href="https://www.google.com/webmasters/">https://www.google.com/webmasters/</a></a></code> afterward I have to download the html verification file and uploaded it to my site server and click the verify button. after an hour I checked again my site and my friend&rsquo;s site and now its already indexed by Google, hoping it will gain some rankings after some time for a chance to be read by other viewers.</p>
+<div class="entry-content"><p>Installing Drupal on Localhost</p>
+
+<p>In order to run Drupal locally we must have a Server that runs Apache, Php and MySQL,
+for windows you can install software bundle called wamp
+for mac you can use mamp
+and for linux you can install lamp, but I recommend to install it individually, in my experience as a linux user installing a bundle package will cause you a lot of errors rather than installing it individually.</p>
+
+<p>Installing Apache, PHP MySQL and PHPmyadmin for LINUX</p>
+
+<p>Open terminal and type in these commands:</p>
+
+<p>APACHE</p>
+
+<p><code>sudo apt-get</code>
+<code>sudo apt-get install apache2</code>
+to test if the apache is working browse <code><a href="http://localhost">http://localhost</a></code></p>
+
+<p>MySQL
+<code>sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql</code>
+<code>sudo mysql_install_db</code>
+<code>sudo /usr/bin/mysql_secure_installation</code>
+prompt will appear asking for current password for root</p>
+
+<pre>Enter current password for root (enter for none): 
+OK, successfully used password, moving on...</pre>
+
+
+<p>for testing purposes I would recommend to not put password for root,
+a bunch of promt questions will follow along installation just type y to all.</p>
+
+<p>PHP</p>
+
+<p><code>sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt</code></p>
+
+<p>PHPmyadmin</p>
+
+<p><code>sudo apt-get install phpmyadmin</code></p>
+
+<p>after you installed the LAMP</p>
+
+<p>download the drupal at <code><a href="https://drupal.org/download">https://drupal.org/download</a></code>
+choose the .zip format and unzipped it after download to see the drupal folder
+use the terminal to move the drupal folder to var/www by typing <code>sudo mv Downloads/Drupal-7.27 /var/www</code></p>
+
+<p>Note: You may need to grant access to your /var/www folder to do this simply type the following:</p>
+
+<pre>
+sudo chmod -R 777 /var/www
+sudo chown -R **yourusername** /var/www
+</pre>
+
+
+<p>Next thing you must do is to setup the database for your drupal, browse <a href="http://localhost/phpmyadmin">http://localhost/phpmyadmin</a>
+and create a database for your drupal.</p>
+
+<p>then browse <a href="http://localhost/drupal">http://localhost/drupal</a> folder name ex. <a href="http://localhost/drupal-7.27">http://localhost/drupal-7.27</a> this will take you to the installation, just follow the instruction and you wil be able to install drupal.</p>
 </div>
 
 
@@ -116,7 +172,7 @@
   
 
 
-<time datetime="2014-04-04T18:28:48+08:00" pubdate data-updated="true">Apr 4<span>th</span>, 2014</time>
+<time datetime="2014-05-07T11:39:26+08:00" pubdate data-updated="true">May 7<span>th</span>, 2014</time>
       
 
 
@@ -124,7 +180,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://jayetan.github.io/blog/2014/04/04/google-index/" data-via="" data-counturl="http://jayetan.github.io/blog/2014/04/04/google-index/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://jayetan.github.io/blog/2014/05/07/installing-drupal-locally/" data-via="" data-counturl="http://jayetan.github.io/blog/2014/05/07/installing-drupal-locally/" >Tweet</a>
   
   
   
@@ -133,10 +189,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/04/04/creating-static-punch-webpage/" title="Previous Post: Creating static punch web page">&laquo; Creating static punch web page</a>
+        <a class="basic-alignment left" href="/blog/2014/05/06/creating-grails-app/" title="Previous Post: Creating Grails App">&laquo; Creating Grails App</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/04/07/parallax-scrolling/" title="Next Post: Parallax scrolling">Parallax scrolling &raquo;</a>
       
     </p>
   </footer>

@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-05-07T14:53:44+08:00</updated>
+  <updated>2014-05-09T09:10:12+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Jaye Tan]]></name>
@@ -12,6 +12,70 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Installing Drupal Locally]]></title>
+    <link href="http://jayetan.github.io/blog/2014/05/07/installing-drupal-locally/"/>
+    <updated>2014-05-07T11:39:26+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/05/07/installing-drupal-locally</id>
+    <content type="html"><![CDATA[<p>Installing Drupal on Localhost</p>
+
+<p>In order to run Drupal locally we must have a Server that runs Apache, Php and MySQL,
+for windows you can install software bundle called wamp
+for mac you can use mamp
+and for linux you can install lamp, but I recommend to install it individually, in my experience as a linux user installing a bundle package will cause you a lot of errors rather than installing it individually.</p>
+
+<p>Installing Apache, PHP MySQL and PHPmyadmin for LINUX</p>
+
+<p>Open terminal and type in these commands:</p>
+
+<p>APACHE</p>
+
+<p><code>sudo apt-get</code>
+<code>sudo apt-get install apache2</code>
+to test if the apache is working browse <code><a href="http://localhost">http://localhost</a></code></p>
+
+<p>MySQL
+<code>sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql</code>
+<code>sudo mysql_install_db</code>
+<code>sudo /usr/bin/mysql_secure_installation</code>
+prompt will appear asking for current password for root</p>
+
+<pre>Enter current password for root (enter for none): 
+OK, successfully used password, moving on...</pre>
+
+
+<p>for testing purposes I would recommend to not put password for root,
+a bunch of promt questions will follow along installation just type y to all.</p>
+
+<p>PHP</p>
+
+<p><code>sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt</code></p>
+
+<p>PHPmyadmin</p>
+
+<p><code>sudo apt-get install phpmyadmin</code></p>
+
+<p>after you installed the LAMP</p>
+
+<p>download the drupal at <code><a href="https://drupal.org/download">https://drupal.org/download</a></code>
+choose the .zip format and unzipped it after download to see the drupal folder
+use the terminal to move the drupal folder to var/www by typing <code>sudo mv Downloads/Drupal-7.27 /var/www</code></p>
+
+<p>Note: You may need to grant access to your /var/www folder to do this simply type the following:</p>
+
+<pre>
+sudo chmod -R 777 /var/www
+sudo chown -R **yourusername** /var/www
+</pre>
+
+
+<p>Next thing you must do is to setup the database for your drupal, browse <a href="http://localhost/phpmyadmin">http://localhost/phpmyadmin</a>
+and create a database for your drupal.</p>
+
+<p>then browse <a href="http://localhost/drupal">http://localhost/drupal</a> folder name ex. <a href="http://localhost/drupal-7.27">http://localhost/drupal-7.27</a> this will take you to the installation, just follow the instruction and you wil be able to install drupal.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Creating Grails App]]></title>
