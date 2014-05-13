@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-05-13T11:58:18+08:00</updated>
+  <updated>2014-05-13T12:09:32+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Jaye Tan]]></name>
@@ -56,7 +56,7 @@ a bunch of promt questions will follow along installation just type y to all.</p
 
 <p><code>sudo apt-get install phpmyadmin</code></p>
 
-<p>after you installed the LAMP</p>
+<p>after you installed the Apache MySQL PHP and PHPmyadmin</p>
 
 <p>download the drupal at <code><a href="https://drupal.org/download">https://drupal.org/download</a></code>
 choose the .zip format and unzipped it after download to see the drupal folder
