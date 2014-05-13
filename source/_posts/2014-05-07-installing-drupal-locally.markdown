@@ -42,7 +42,7 @@ PHPmyadmin
 
 <code>sudo apt-get install phpmyadmin</code>
 
-after you installed the LAMP
+after you installed the Apache MySQL PHP and PHPmyadmin
 
 download the drupal at <code>https://drupal.org/download</code>
 choose the .zip format and unzipped it after download to see the drupal folder
