@@ -6,10 +6,10 @@ comments: true
 categories: 
 ---
 
-Creating Multiple Github Account on Single Machine<br />
+Creating Multiple Github Account on a Single Machine<br />
 (don't change your default github if you have octopress site in your personal github)
 
-In case already have a personal Github account and want to create a new one for your projects or your client on a single machine (computer) follow this easy steps.
+In case you already have a personal Github account and want to create a new one for your projects or your client on a single machine (computer) follow this easy steps.
 
 
 Create a new ssh key by typing in the terminal
@@ -18,7 +18,7 @@ a prompt will show asking where to save the generated key, be carefull not to ov
 
 Then go to ~/.ssh using terminal, type <code>gedit id_rsa_clientName.pub</code> then copy the whole line then login your new github account, go to settings-account settings-ssh key click Add SSH key, give your ssh key a title and then paste your ssh key.
 
-next thing you want to do is to add the new ssh key identity by typing <code>ssh-add ~/.ssh/id_rsa_clientName</code> this will allow you to sign in to your github account using the new ssh key, it also tells the git which key should it use to access your github account, this will also fixed the error: Agent admitted failure to sign using the ssh key.
+next thing you want to do is to identify the new ssh key by typing <code>ssh-add ~/.ssh/id_rsa_clientName</code> this will allow you to sign in to your github account using the new ssh key, it also tells the git which key should it use to access your github account, this will also fixed the error: Agent admitted failure to sign using the ssh key.
 
 assuming your still on the .ssh folder, create a config file by typing <code>touch config</code> then type in <code>gedit config</code> then paste this line of text
 <pre>
