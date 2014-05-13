@@ -65,8 +65,8 @@ Then open <code>BuildConfig.groovy</code> find and uncomment the line <code>runt
 <small>
 NOTE: dbCreate dictates what grails will do to the database, these are the following definition you can use:
 
-create-drop - Drop and re-create the database when Grails is run
-create - Create the database if it doesn't exist, but don't modify it if it does. Deletes existing data.
+create-drop - Drop and re-create the database when Grails is run<br />
+create - Create the database if it doesn't exist, but don't modify it if it does. Deletes existing data.<br />
 update - Create the database if it doesn't exist, and modify it if it does exist
 
 <code>-Both create-drop and create will destroy all existing data-</code>

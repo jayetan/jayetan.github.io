@@ -4,7 +4,6 @@ title: "Installing Drupal locally"
 date: 2014-05-07 11:39:26 +0800
 comments: true
 categories:
-published: false
 ---
 
 Installing Drupal on Localhost
@@ -49,3 +48,13 @@ download the drupal at <code>https://drupal.org/download</code>
 choose the .zip format and unzipped it after download to see the drupal folder
 use the terminal to move the drupal folder to var/www by typing <code>sudo mv Downloads/Drupal-7.27 /var/www</code>
 
+Note: You may need to grant access to your /var/www folder to do this simply type the following:
+<pre>
+sudo chmod -R 777 /var/www
+sudo chown -R **yourusername** /var/www
+</pre>
+
+Next thing you must do is to setup the database for your drupal, browse http://localhost/phpmyadmin
+and create a database for your drupal.
+
+then browse http://localhost/drupal folder name ex. http://localhost/drupal-7.27 this will take you to the installation, just follow the instruction and you wil be able to install drupal.
