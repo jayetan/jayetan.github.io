@@ -9,8 +9,8 @@
   <meta name="author" content="Jaye Tan">
 
   
-  <meta name="description" content="Installing Drupal on Localhost In order to run Drupal locally we must have a Server that runs Apache, Php and MySQL,
-for windows you can install &hellip;">
+  <meta name="description" content="Creating Multiple Github Account on Single Machine
+(don&rsquo;t change your default github if you have octopress site in your personal github) In &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,79 @@ for windows you can install &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/13/creating-multiple-github-account/">Creating Multiple Github Account</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-13T14:36:52+08:00" pubdate data-updated="true">May 13<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Creating Multiple Github Account on Single Machine
+(don&rsquo;t change your default github if you have octopress site in your personal github)</p>
+
+<p>In case already have a personal Github account and want to create a new one for your projects or your client on a single machine (computer) follow this easy steps.</p>
+
+<p>Create a new ssh key by typing in the terminal</p>
+
+<p><code>ssh-keygen -t rsa -C &ldquo;email address&rdquo;</code>
+a prompt will show asking where to save the generated key be carefull not to overwrite your existing key just save it as ex. <code>~/.ssh/id_rsa_clientName</code></p>
+
+<p>Then go to ~/.ssh using terminal type <code>gedit id_rsa_clientName.pub</code> then copy the whole line then login your new github account the go to settings-account settings-ssh key click Add SSH key, give your ssh key a title and then paste your ssh key.</p>
+
+<p>next thing you want to do is to add the new ssh key identity by typing <code>ssh-add ~/.ssh/id_rsa_clientName</code> this will allow you to sign in to your github account using the new ssh key it also tells the git which key should it be using to access your github account, this will also fixed the error: Agent admitted failure to sign using the ssh key.</p>
+
+<p>assuming your still on .ssh folder, next is, create a config file by typing <code>touch config</code> then type in <code>gedit config</code> then paste this line of text</p>
+
+<pre>
+#Default GitHub
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+Host github-clientName
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_clientName
+</pre>
+
+
+<p>this is where we will specify the new github hostname notice the Host github.com that is our default github while the Host github-clientName is our new github account.</p>
+
+<p>after this we can now push to our new github account, but we need first to create a new repository and copy the git repository url ex. <code>git@github.com:clientName/projectName.git</code> we will be copying only the clientName/projectName.git because we will specify the git remote origin by typing <code>git remote add origin github-clientName:clientName/projectName.git</code>
+(this is also applicable if you are pulling/cloning an existing repository)</p>
+
+<p>Note: As I stated above if you wish to have an multiple github account but already have an personal github account with octopress in it, you should not make that as your secondary github account, you will able to push to source but you cannot use &ldquo;rake deploy&rdquo; to push a new blog.</p>
+
+<p><small>tags: octopress rake deploy error on multiple github accounts, github multiple accounts, Agent admitted failure to sign using the ssh key</small></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -792,6 +865,10 @@ Sometime this week I&rsquo;ll be adding more pages for my blogs about what I hav
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/05/13/creating-multiple-github-account/">Creating Multiple Github Account</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/05/07/installing-drupal-locally/">Installing Drupal Locally</a>
       </li>
     
@@ -805,10 +882,6 @@ Sometime this week I&rsquo;ll be adding more pages for my blogs about what I hav
     
       <li class="post">
         <a href="/blog/2014/04/07/parallax-scrolling/">Parallax Scrolling</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/04/google-index/">Google Index</a>
       </li>
     
   </ul>
