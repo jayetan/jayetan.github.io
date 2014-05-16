@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-05-16T10:21:39+08:00</updated>
+  <updated>2014-05-16T10:54:12+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Jaye Tan]]></name>
@@ -84,7 +84,7 @@ and for linux you can install lamp, but I recommend to install it individually, 
 
 <p>APACHE</p>
 
-<p><code>sudo apt-get</code>
+<p><code>sudo apt-get update</code>
 <code>sudo apt-get install apache2</code>
 to test if the apache is working browse <code><a href="http://localhost">http://localhost</a></code></p>
 
