@@ -41,5 +41,12 @@ after this we can now push to our new github account, but we need first to creat
 
 Note: As I stated above if you wish to have an multiple github account but already have an personal github account with octopress in it, you should not make that as your secondary github account, you will able to push to source but you cannot use "rake deploy" to push a new blog.
 
+If this error shows up:<pre>
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
 
+Please make sure you have the correct access rights
+and the repository exists.
+</pre>
+you need to type this on the terminal <code>ssh-add ~/.ssh/id_rsa_clientName</code><br />
 <small>tags: octopress rake deploy error on multiple github accounts, github multiple accounts, Agent admitted failure to sign using the ssh key</small>

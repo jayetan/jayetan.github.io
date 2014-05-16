@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Just finished setting up my octopress blog"
+title: "Just Finished Setting Up My Octopress Blog"
 date: 2014-03-27 18:05:51 +0800
 comments: true
 categories: 

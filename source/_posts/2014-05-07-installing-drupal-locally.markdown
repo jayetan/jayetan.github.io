@@ -19,7 +19,7 @@ Open terminal and type in these commands:
 
 APACHE
 
-<code>sudo apt-get</code>
+<code>sudo apt-get update</code>
 <code>sudo apt-get install apache2</code>
 to test if the apache is working browse <code>http://localhost</code>
 
