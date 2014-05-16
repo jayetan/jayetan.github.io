@@ -131,19 +131,16 @@ Host github-clientName
 <p>after this we can now push to our new github account, but we need first to create a new repository and copy the git repository url ex. <code>git@github.com:clientName/projectName.git</code> we will be copying only the &ldquo;clientName/projectName.git&rdquo; because we will specify the git remote origin by typing <code>git remote add origin github-clientName:clientName/projectName.git</code>
 (this is also applicable if you are pulling/cloning an existing repository)</p>
 
-<p>Note: As I stated above if you wish to have an multiple github account but already have an personal github account with octopress in it, you should not make that as your secondary github account, you will able to push to source but you cannot use &ldquo;rake deploy&rdquo; to push a new blog.
-If this error shows up:</p>
+<p>Note: As I stated above if you wish to have an multiple github account but already have an personal github account with octopress in it, you should not make that as your secondary github account, you will able to push to source but you cannot use &ldquo;rake deploy&rdquo; to push a new blog.</p>
 
-<pre>
+<p>If this error shows up:<pre>
 ERROR: Repository not found.
-fatal: Could not read from remote repository.
+fatal: Could not read from remote repository.</p>
 
-Please make sure you have the correct access rights
+<p>Please make sure you have the correct access rights
 and the repository exists.
 </pre>
-
-
-<p>you need to type this on the terminal <code>ssh-add ~/.ssh/id_rsa_clientName</code>
+you need to type this on the terminal <code>ssh-add ~/.ssh/id_rsa_clientName</code><br />
 <small>tags: octopress rake deploy error on multiple github accounts, github multiple accounts, Agent admitted failure to sign using the ssh key</small></p>
 </div>
   
