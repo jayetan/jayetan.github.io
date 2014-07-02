@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-06-03T13:37:33+08:00</updated>
+  <updated>2014-07-02T21:44:40+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Jaye Tan]]></name>
@@ -12,6 +12,61 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Python]]></title>
+    <link href="http://jayetan.github.io/blog/2014/06/30/learning-python/"/>
+    <updated>2014-06-30T21:12:58+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/06/30/learning-python</id>
+    <content type="html"><![CDATA[<p>What is Python?</p>
+
+<p>Python is a modern object-oriented programming language that&rsquo;s well-suited for a variety of uses, from simple scripts to complex web applications. Using third-party tools, such as Py2exe or Pyinstaller, Python code can be packaged into standalone executable programs.</p>
+
+<p>This Blog will be updated during my free time to share all the knowledge I learned in studing this powerful porgramming language.</p>
+
+<p>Before we start make sure that you have the python installed in your computer, If you are using linux or mac chances are that you already have python preinstalled in your computer.</p>
+
+<p>In this blog I&rsquo;ll be using python 3, and sublime as my text editor. you can use what ever text editor you like such as eclipse to help you in you coding and compiling in one development application, but I prefer the traditional way of doing it using a separate text editor and command line it running python.</p>
+
+<p>I will be starting this blog by creating the traditional hello world program.</p>
+
+<pre>
+#!/usr/bin/python3
+print("Hello, World!")
+</pre>
+
+
+<p>to run python, save the file first with .py extension ex. helloWorld.py then you should compile it by typing in the terminal <code>cat helloWorld.py</code> then to run the program type in <code>./helloWorld.py</code> if you got an Permission denied error type <code>chmod 755 helloWorld.py</code> to make it executable.</p>
+
+<p>looking in the helloWorld.py the line <code>#!/usr/bin/python3</code> is called shebang line, in unix based operating system such as linux and mackintosh, this is the path to the python interpreter which tells the computer to use it to run the program.
+while the <code>print(&ldquo;Hello, World&rdquo;)</code> is use to display the a text.</p>
+
+<p>Assigning Values</p>
+
+<pre>
+a, b = 1, 2
+</pre>
+
+
+<p>1 will be assigned in &ldquo;a&rdquo;, and 2 will be assigned in &ldquo;b&rdquo;, so &ldquo;a&rdquo; will hold the value of 1 and &ldquo;b&rdquo; will hold the value of 2.</p>
+
+<p>Conditional Statement</p>
+
+<pre>
+a, b = 1, 2
+
+if a < b:
+    print("a ({}) is less than b ({})".format(a, b))
+else:
+    print("a ({}) is not less than b ({})".format(a, b))
+</pre>
+
+
+<p>In python in creating conditional statement, you type the condition followed by colon then the indented code, this is how you create a block of codes in python.</p>
+
+<p>&lt;&mdash; TO BE CONTINUED &mdash;></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Creating Multiple Github Account]]></title>

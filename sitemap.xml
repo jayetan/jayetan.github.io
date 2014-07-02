@@ -39,8 +39,12 @@
         <lastmod>2014-05-16T10:21:30+08:00</lastmod>
     </url>
     <url>
+        <loc>http://jayetan.github.io/blog/2014/06/30/learning-python/</loc>
+        <lastmod>2014-07-02T21:43:50+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://jayetan.github.io/blog/archives/</loc>
-        <lastmod>2014-05-16T10:53:59+08:00</lastmod>
+        <lastmod>2014-07-02T21:43:50+08:00</lastmod>
     </url>
     <url>
         <loc>http://jayetan.github.io/robots.txt</loc>
@@ -48,6 +52,6 @@
     </url>
     <url>
         <loc>http://jayetan.github.io/</loc>
-        <lastmod>2014-05-16T10:53:59+08:00</lastmod>
+        <lastmod>2014-07-02T21:43:50+08:00</lastmod>
     </url>
 </urlset>
