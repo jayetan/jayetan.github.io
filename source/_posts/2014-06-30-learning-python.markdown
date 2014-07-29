@@ -49,6 +49,38 @@ else:
 	print("a ({}) is not less than b ({})".format(a, b))
 </pre>
 
-In python in creating conditional statement, you type the condition followed by colon then the indented code, this is how you create a block of codes in python.
+In creating conditional statement in python, you type the condition followed by colon then the indented code, this is how you create a block of codes in python, blocks are called "suites" in python. you can see this kind of syntax in loops, functions and classes. If you notice the curly braces inside the print statement, it will be replaced by the value inside the format. This format is a method of string object.
+
+Conditional Expression
+<pre>
+a, b = 1, 2
+
+print("foo" if a < b else "bar")
+</pre>
+
+This is the other way of creating conditionals in python
+
+
+Working with loops
+
+There are two kinds of loops in python, the while loop and for loop.
+
+While Loop
+<pre>
+b = 1
+while b < 50:
+	print(b)
+	b += 1
+</pre>
+
+In creating while loop we type while followed by the condition then a colon, then underneath it we place the code we want to be done in this case print the value of b then followed by the incrementing value, in python the is no "++" e.g "b++" to increment the value by one, instead we can use "+=" sign to increment a value. In this example the print(b) will continue to execute until it reach 50, if we run the program we will see numbers 1 to 49, it will shows only up to 49 since the the increment happens after the print().
+
+For Loop
+<pre>
+fruits = ['banana', 'apple',  'mango']
+for fruit in fruits:
+	print('Current fruit :', fruit)
+</pre>
+
 
 <-- TO BE CONTINUED -->
