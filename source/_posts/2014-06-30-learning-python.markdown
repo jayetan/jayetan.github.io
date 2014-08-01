@@ -11,7 +11,7 @@ What is Python?
 Python is a modern object-oriented programming language that's well-suited for a variety of uses, from simple scripts to complex web applications. Using third-party tools, such as Py2exe or Pyinstaller, Python code can be packaged into standalone executable programs.
 
 
-This Blog will be updated during my free time to share all the knowledge I learned in studing this powerful porgramming language.
+This Blog will be updated during my free time to share all the knowledge I learned in studing this powerful programming language.
 
 Before we start make sure that you have the python installed in your computer, If you are using linux or mac chances are that you already have python preinstalled in your computer.
 
@@ -62,7 +62,6 @@ This is the other way of creating conditionals in python
 
 
 Working with loops
-
 There are two kinds of loops in python, the while loop and for loop.
 
 While Loop
