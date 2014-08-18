@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-08-18T14:37:59+08:00</updated>
+  <updated>2014-08-18T14:40:35+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Jaye Tan]]></name>
@@ -23,6 +23,9 @@
 <p><a href="http://en.wikipedia.org/wiki/Django_(web_framework)">Django</a> is a free and open source web application framework, written in Python, which follows the model–view–controller architectural pattern.
 Django&rsquo;s primary goal is to ease the creation of complex, database-driven websites. Django emphasizes reusability and &ldquo;pluggability&rdquo; of components, rapid development, and the principle of don&rsquo;t repeat yourself. Python is used throughout, even for settings, files, and data models. Django also provides an optional administrative create, read, update and delete interface that is generated dynamically through introspection and configured via admin models.</p>
 
+<br />
+
+
 <p>How to install</p>
 
 <p>first download the tarball of django at <a href="https://www.djangoproject.com/download/">https://www.djangoproject.com/download/</a>
@@ -36,12 +39,20 @@ sudo python setup.py install
 <p>
 if it didn&rsquo;t work you can read the README.rst which can be found at the extracted django folder and read the instruction on how to install it.</p>
 
+<br />
+
+
 <p>Listing all available commands
 to list all available Django commands just type</p>
 
 <pre>
 django-admin.py
 </pre>
+
+
+
+
+<br />
 
 
 <p>Creating django project
@@ -54,6 +65,9 @@ django-admin.py startproject django_test
 
 <p>where in django_test is the name of your project, after installing, a folder with name django_test will be created it will also contains django files.</p>
 
+<br />
+
+
 <p>Running django server</p>
 
 <pre>
@@ -62,6 +76,9 @@ python manage.py runserver
 
 
 <p>this will run the django server on localhost:8000, just view it on you browser and you will able to see this line &ldquo;It worked! Congratulations on your first Django-powered page.&rdquo;</p>
+
+<br />
+
 
 <p>Changing the Django default page using templates
 in settings.py add these lines</p>
@@ -89,6 +106,9 @@ url(r'^$', TemplateView.as_view(template_name="index.html")),
 
 <p>then make a folder name templates inside your project, inside that templates folder create an index.html and add you html codes.</p>
 
+<br />
+
+
 <p>Creating an App</p>
 
 <pre>
@@ -97,6 +117,9 @@ python manage.py startapp article
 
 
 <p>where article is the name of the app</p>
+
+<br />
+
 
 <p>Make views.py in apps use template
 put this on top of the page to be able to pass variables and use template</p>
@@ -118,6 +141,11 @@ def article(request):
 </pre>
 
 
+
+
+<br />
+
+
 <p>The simpliest way rendering template</p>
 
 <pre>
@@ -134,6 +162,11 @@ def article(request):
 </pre>
 
 
+
+
+<br />
+
+
 <p>Rendering template via class definition (can also be used in changing django default page)
 assuming you have already imported TemplateView</p>
 
@@ -146,6 +179,11 @@ class articleTemplate(TemplateView):
         context["test"] = "Admin"
         return context
 </pre>
+
+
+
+
+<br />
 
 
 <p>Creating template that includes external header and footer or anything you want.
