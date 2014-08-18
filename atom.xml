@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-08-18T14:24:07+08:00</updated>
+  <updated>2014-08-18T14:25:26+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Jaye Tan]]></name>
@@ -45,7 +45,7 @@ if it didn&rsquo;t work you can read the README.rst which can be found at the ex
 </pre>
 
 
-<p>Installing django</p>
+<p>Creating django project</p>
 
 <p>just type</p>
 
