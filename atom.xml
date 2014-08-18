@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-08-14T16:53:40+08:00</updated>
+  <updated>2014-08-18T14:24:07+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Jaye Tan]]></name>
@@ -12,6 +12,172 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Up and Running With Django]]></title>
+    <link href="http://jayetan.github.io/blog/2014/08/15/up-and-running-with-django/"/>
+    <updated>2014-08-15T22:55:06+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/08/15/up-and-running-with-django</id>
+    <content type="html"><![CDATA[<p>What is Django?</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Django_(web_framework)">Django</a> is a free and open source web application framework, written in Python, which follows the model–view–controller architectural pattern.
+Django&rsquo;s primary goal is to ease the creation of complex, database-driven websites. Django emphasizes reusability and &ldquo;pluggability&rdquo; of components, rapid development, and the principle of don&rsquo;t repeat yourself. Python is used throughout, even for settings, files, and data models. Django also provides an optional administrative create, read, update and delete interface that is generated dynamically through introspection and configured via admin models.</p>
+
+<p>How to install</p>
+
+<p>first download the tarball of django at <a href="https://www.djangoproject.com/download/">https://www.djangoproject.com/download/</a>
+extract it and via terminal go to the extracted folder of django, then type</p>
+
+<pre>
+    sudo python setup.py install
+</pre>
+
+
+<p>
+if it didn&rsquo;t work you can read the README.rst which can be found at the extracted django folder and read the instruction on how to install it.</p>
+
+<p>Listing all available commands</p>
+
+<p>to list all available Django commands just type</p>
+
+<pre>
+    django-admin.py
+</pre>
+
+
+<p>Installing django</p>
+
+<p>just type</p>
+
+<pre>
+    django-admin.py startproject django_test
+</pre>
+
+
+<p>where in django_test is the name of your project, after installing, a folder with name django_test will be created it will also contains django files.</p>
+
+<p>Running django server</p>
+
+<pre>
+    python manage.py runserver
+</pre>
+
+
+<p>this will run the django server on localhost:8000, just view it on you browser and you will able to see this line &ldquo;It worked! Congratulations on your first Django-powered page.&rdquo;</p>
+
+<p>Changing the Django default page using templates</p>
+
+<p>in settings.py add these lines</p>
+
+<pre>
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)
+</pre>
+
+
+<p>then on urls.py add this line in the top page</p>
+
+<pre>
+    from django.views.generic import TemplateView
+</pre>
+
+
+<p>then include this on urlpatterns inside urls.py</p>
+
+<pre>
+    url(r'^$', TemplateView.as_view(template_name="index.html")),
+</pre>
+
+
+<p>then make a folder name templates inside your project, inside that templates folder create an index.html and add you html codes.</p>
+
+<p>Creating an App</p>
+
+<pre>
+    python manage.py startapp article
+</pre>
+
+
+<p>where article is the name of the app</p>
+
+<p>make views.py in apps use template</p>
+
+<p>put this on top of the page to be able to pass variables and use template</p>
+
+<pre>
+    from django.template.loader import get_template
+    from django.template import Context
+</pre>
+
+
+<p>then on views define a function</p>
+
+<pre>
+    def article(request):
+    name = "Jaye"
+    template = get_template('article.html')
+    html = template.render(Context({'name': name}))
+    return HttpResponse(html)
+</pre>
+
+
+<p>the simpliest way rendering template</p>
+
+<pre>
+    from django.shortcuts import render_to_response
+</pre>
+
+
+<p>then define a function</p>
+
+<pre>
+    def article(request):
+    name = "Jaye"
+    return render_to_response("article.html", {"name": name})
+</pre>
+
+
+<p>rendering template via class definition (can also be used in changing django default page)
+assuming you have already imported TemplateView</p>
+
+<pre>
+    class articleTemplate(TemplateView):
+        template_name = "article.html"
+        def get_context_data(self, **kwargs):
+            context = super(articleTemplate, self).get_context_data(**kwargs)
+            context["name"] = "Jaye"
+            context["test"] = "Admin"
+            return context
+</pre>
+
+
+<p>Creating template that includes external header and footer or anything you want.
+this is usefull if you have multiple pages that has the same header and footer.</p>
+
+<p>first we create our html files, index.html, <em>header.html, and </em>footer.html
+now open up index.html, then use Include file &lsquo;&rsquo; contains invalid characters or sequences to include the other html files</p>
+
+<pre>
+    &gt;!DOCTYPE html>
+    &gt;html>
+    &gt;head>
+        &gt;title>&gt;/title>
+    &gt;/head>
+    Include file '"_header.html"' contains invalid characters or sequences
+    &gt;body>
+        
+        BODY CONTENTS HERE
+
+    Include file '"_footer.html"' contains invalid characters or sequences
+    &gt;/body>
+    &gt;/html>
+</pre>
+
+
+<p>while the <em>header and </em>footer.html can contain any html tags except for &gt;html>&gt;/html> and &gt;body>&gt;/body></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Detect Mobile - Tablet Orientation Using Jquery]]></title>

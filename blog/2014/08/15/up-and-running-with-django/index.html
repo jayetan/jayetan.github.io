@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Up and Running With Django - Jaye Tan's Octopress Blog</title>
+  <meta name="author" content="Jaye Tan">
+
+  
+  <meta name="description" content="What is Django? Django is a free and open source web application framework, written in Python, which follows the model–view–controller architectural &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jayetan.github.io/blog/2014/08/15/up-and-running-with-django">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Jaye Tan's Octopress Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51591549-1', 'jayetan.github.io');
+  ga('send', 'pageview');
+
+</script>
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jaye Tan's Octopress Blog</a></h1>
+  
+    <h2>Just Blogs</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:jayetan.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="http://bryangamotea.github.io/">Bryan's Blogs</a></li>
+  <li><a href="http://boinx25.github.io/">Boinx's Blogs</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Up and Running With Django</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-15T22:55:06+08:00" pubdate data-updated="true">Aug 15<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>What is Django?</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Django_(web_framework)">Django</a> is a free and open source web application framework, written in Python, which follows the model–view–controller architectural pattern.
+Django&rsquo;s primary goal is to ease the creation of complex, database-driven websites. Django emphasizes reusability and &ldquo;pluggability&rdquo; of components, rapid development, and the principle of don&rsquo;t repeat yourself. Python is used throughout, even for settings, files, and data models. Django also provides an optional administrative create, read, update and delete interface that is generated dynamically through introspection and configured via admin models.</p>
+
+<p>How to install</p>
+
+<p>first download the tarball of django at <a href="https://www.djangoproject.com/download/">https://www.djangoproject.com/download/</a>
+extract it and via terminal go to the extracted folder of django, then type</p>
+
+<pre>
+    sudo python setup.py install
+</pre>
+
+
+<p>
+if it didn&rsquo;t work you can read the README.rst which can be found at the extracted django folder and read the instruction on how to install it.</p>
+
+<p>Listing all available commands</p>
+
+<p>to list all available Django commands just type</p>
+
+<pre>
+    django-admin.py
+</pre>
+
+
+<p>Installing django</p>
+
+<p>just type</p>
+
+<pre>
+    django-admin.py startproject django_test
+</pre>
+
+
+<p>where in django_test is the name of your project, after installing, a folder with name django_test will be created it will also contains django files.</p>
+
+<p>Running django server</p>
+
+<pre>
+    python manage.py runserver
+</pre>
+
+
+<p>this will run the django server on localhost:8000, just view it on you browser and you will able to see this line &ldquo;It worked! Congratulations on your first Django-powered page.&rdquo;</p>
+
+<p>Changing the Django default page using templates</p>
+
+<p>in settings.py add these lines</p>
+
+<pre>
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)
+</pre>
+
+
+<p>then on urls.py add this line in the top page</p>
+
+<pre>
+    from django.views.generic import TemplateView
+</pre>
+
+
+<p>then include this on urlpatterns inside urls.py</p>
+
+<pre>
+    url(r'^$', TemplateView.as_view(template_name="index.html")),
+</pre>
+
+
+<p>then make a folder name templates inside your project, inside that templates folder create an index.html and add you html codes.</p>
+
+<p>Creating an App</p>
+
+<pre>
+    python manage.py startapp article
+</pre>
+
+
+<p>where article is the name of the app</p>
+
+<p>make views.py in apps use template</p>
+
+<p>put this on top of the page to be able to pass variables and use template</p>
+
+<pre>
+    from django.template.loader import get_template
+    from django.template import Context
+</pre>
+
+
+<p>then on views define a function</p>
+
+<pre>
+    def article(request):
+    name = "Jaye"
+    template = get_template('article.html')
+    html = template.render(Context({'name': name}))
+    return HttpResponse(html)
+</pre>
+
+
+<p>the simpliest way rendering template</p>
+
+<pre>
+    from django.shortcuts import render_to_response
+</pre>
+
+
+<p>then define a function</p>
+
+<pre>
+    def article(request):
+    name = "Jaye"
+    return render_to_response("article.html", {"name": name})
+</pre>
+
+
+<p>rendering template via class definition (can also be used in changing django default page)
+assuming you have already imported TemplateView</p>
+
+<pre>
+    class articleTemplate(TemplateView):
+        template_name = "article.html"
+        def get_context_data(self, **kwargs):
+            context = super(articleTemplate, self).get_context_data(**kwargs)
+            context["name"] = "Jaye"
+            context["test"] = "Admin"
+            return context
+</pre>
+
+
+<p>Creating template that includes external header and footer or anything you want.
+this is usefull if you have multiple pages that has the same header and footer.</p>
+
+<p>first we create our html files, index.html, <em>header.html, and </em>footer.html
+now open up index.html, then use Include file &lsquo;&rsquo; contains invalid characters or sequences to include the other html files</p>
+
+<pre>
+    &gt;!DOCTYPE html>
+    &gt;html>
+    &gt;head>
+        &gt;title>&gt;/title>
+    &gt;/head>
+    Include file '"_header.html"' contains invalid characters or sequences
+    &gt;body>
+        
+        BODY CONTENTS HERE
+
+    Include file '"_footer.html"' contains invalid characters or sequences
+    &gt;/body>
+    &gt;/html>
+</pre>
+
+
+<p>while the <em>header and </em>footer.html can contain any html tags except for &gt;html>&gt;/html> and &gt;body>&gt;/body></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jaye Tan</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-15T22:55:06+08:00" pubdate data-updated="true">Aug 15<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://jayetan.github.io/blog/2014/08/15/up-and-running-with-django/" data-via="" data-counturl="http://jayetan.github.io/blog/2014/08/15/up-and-running-with-django/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/08/01/detect-mobile-tablet-orientation-using-jquery/" title="Previous Post: Detect mobile - tablet orientation using jquery">&laquo; Detect mobile - tablet orientation using jquery</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/15/up-and-running-with-django/">Up and Running With Django</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/01/detect-mobile-tablet-orientation-using-jquery/">Detect Mobile - Tablet Orientation Using Jquery</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/30/learning-python/">Learning Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/13/creating-multiple-github-account/">Creating Multiple Github Account</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/07/installing-drupal-locally/">Installing Drupal Locally</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Jaye Tan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
