@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-08-18T14:56:17+08:00</updated>
+  <updated>2014-08-18T14:58:36+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Jaye Tan]]></name>
@@ -36,16 +36,18 @@ sudo python setup.py install
 <p>
 if it didn&rsquo;t work you can read the README.rst which can be found at the extracted django folder and read the instruction on how to install it.</p>
 
-<p>Listing all available commands
-to list all available Django commands just type</p>
+<p>Listing all available commands</p>
+
+<p>to list all available Django commands just type</p>
 
 <pre>
 django-admin.py
 </pre>
 
 
-<p>Creating django project
-just type</p>
+<p>Creating django project</p>
+
+<p>just type</p>
 
 <pre>
 django-admin.py startproject django_test
@@ -63,8 +65,9 @@ python manage.py runserver
 
 <p>this will run the django server on localhost:8000, just view it on you browser and you will able to see this line &ldquo;It worked! Congratulations on your first Django-powered page.&rdquo;</p>
 
-<p>Changing the Django default page using templates
-in settings.py add these lines</p>
+<p>Changing the Django default page using templates</p>
+
+<p>in settings.py add these lines</p>
 
 <pre>
 TEMPLATE_DIRS = (
@@ -135,8 +138,9 @@ def article(request):
 </pre>
 
 
-<p>Rendering template via class definition (can also be used in changing django default page)
-assuming you have already imported TemplateView</p>
+<p>Rendering template via class definition (can also be used in changing django default page)</p>
+
+<p>assuming you have already imported TemplateView</p>
 
 <pre>
 class articleTemplate(TemplateView):
@@ -149,8 +153,9 @@ class articleTemplate(TemplateView):
 </pre>
 
 
-<p>Creating template that includes external header and footer or anything you want.
-this is usefull if you have multiple pages that has the same header and footer.</p>
+<p>Creating template that includes external header and footer or anything you want.</p>
+
+<p>this is usefull if you have multiple pages that has the same header and footer.</p>
 
 <p>first we create our html files, index.html, &#95;header.html, and &#95;footer.html
 now open up index.html, then use &#123;&#37; include &#37;&#125; to include the other html files</p>
