@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-08-18T14:58:36+08:00</updated>
+  <updated>2014-08-18T16:20:08+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Jaye Tan]]></name>
@@ -178,6 +178,29 @@ now open up index.html, then use &#123;&#37; include &#37;&#125; to include the 
 
 
 <p>while the &#95;header and &#95;footer.html can contain any html tags except for &lt;html>&lt;/html> and &lt;body>&lt;/body></p>
+
+<p>Enabling Django Admin</p>
+
+<p>go to settings.py and uncomment these lines</p>
+
+<pre>
+'django.contrib.admin',
+'django.contrib.auth',
+</pre>
+
+
+<p>and</p>
+
+<p>go to urls.py and uncomment these lines</p>
+
+<pre>
+from django.contrib import admin
+admin.autodiscover()
+url(r'^admin/', include(admin.site.urls)),
+</pre>
+
+
+<p>after this you will now able to log in the admin page of django <a href="http://localhost:8000/admin">http://localhost:8000/admin</a></p>
 ]]></content>
   </entry>
   
