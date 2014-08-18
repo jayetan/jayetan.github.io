@@ -113,7 +113,7 @@ Django&rsquo;s primary goal is to ease the creation of complex, database-driven 
 extract it and via terminal go to the extracted folder of django, then type</p>
 
 <pre>
-    sudo python setup.py install
+sudo python setup.py install
 </pre>
 
 
@@ -125,7 +125,7 @@ if it didn&rsquo;t work you can read the README.rst which can be found at the ex
 <p>to list all available Django commands just type</p>
 
 <pre>
-    django-admin.py
+django-admin.py
 </pre>
 
 
@@ -134,7 +134,7 @@ if it didn&rsquo;t work you can read the README.rst which can be found at the ex
 <p>just type</p>
 
 <pre>
-    django-admin.py startproject django_test
+django-admin.py startproject django_test
 </pre>
 
 
@@ -143,7 +143,7 @@ if it didn&rsquo;t work you can read the README.rst which can be found at the ex
 <p>Running django server</p>
 
 <pre>
-    python manage.py runserver
+python manage.py runserver
 </pre>
 
 
@@ -163,14 +163,14 @@ TEMPLATE_DIRS = (
 <p>then on urls.py add this line in the top page</p>
 
 <pre>
-    from django.views.generic import TemplateView
+from django.views.generic import TemplateView
 </pre>
 
 
 <p>then include this on urlpatterns inside urls.py</p>
 
 <pre>
-    url(r'^$', TemplateView.as_view(template_name="index.html")),
+url(r'^$', TemplateView.as_view(template_name="index.html")),
 </pre>
 
 
@@ -179,7 +179,7 @@ TEMPLATE_DIRS = (
 <p>Creating an App</p>
 
 <pre>
-    python manage.py startapp article
+python manage.py startapp article
 </pre>
 
 
@@ -190,15 +190,15 @@ TEMPLATE_DIRS = (
 <p>put this on top of the page to be able to pass variables and use template</p>
 
 <pre>
-    from django.template.loader import get_template
-    from django.template import Context
+from django.template.loader import get_template
+from django.template import Context
 </pre>
 
 
 <p>then on views define a function</p>
 
 <pre>
-    def article(request):
+def article(request):
     name = "Jaye"
     template = get_template('article.html')
     html = template.render(Context({'name': name}))
@@ -209,14 +209,14 @@ TEMPLATE_DIRS = (
 <p>the simpliest way rendering template</p>
 
 <pre>
-    from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response
 </pre>
 
 
 <p>then define a function</p>
 
 <pre>
-    def article(request):
+def article(request):
     name = "Jaye"
     return render_to_response("article.html", {"name": name})
 </pre>
@@ -226,13 +226,13 @@ TEMPLATE_DIRS = (
 assuming you have already imported TemplateView</p>
 
 <pre>
-    class articleTemplate(TemplateView):
-        template_name = "article.html"
-        def get_context_data(self, **kwargs):
-            context = super(articleTemplate, self).get_context_data(**kwargs)
-            context["name"] = "Jaye"
-            context["test"] = "Admin"
-            return context
+class articleTemplate(TemplateView):
+    template_name = "article.html"
+    def get_context_data(self, **kwargs):
+        context = super(articleTemplate, self).get_context_data(**kwargs)
+        context["name"] = "Jaye"
+        context["test"] = "Admin"
+        return context
 </pre>
 
 
@@ -243,23 +243,23 @@ this is usefull if you have multiple pages that has the same header and footer.<
 now open up index.html, then use Include file &lsquo;&rsquo; contains invalid characters or sequences to include the other html files</p>
 
 <pre>
-    &gt;!DOCTYPE html>
-    &gt;html>
-    &gt;head>
-        &gt;title>&gt;/title>
-    &gt;/head>
-    Include file '"_header.html"' contains invalid characters or sequences
-    &gt;body>
-        
-        BODY CONTENTS HERE
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+    &lt;title>&lt;/title>
+&lt;/head>
+Include file '"_header.html"' contains invalid characters or sequences
+&lt;body>
+    
+    BODY CONTENTS HERE
 
-    Include file '"_footer.html"' contains invalid characters or sequences
-    &gt;/body>
-    &gt;/html>
+Include file '"_footer.html"' contains invalid characters or sequences
+&lt;/body>
+&lt;/html>
 </pre>
 
 
-<p>while the <em>header and </em>footer.html can contain any html tags except for &gt;html>&gt;/html> and &gt;body>&gt;/body></p>
+<p>while the <em>header and </em>footer.html can contain any html tags except for &lt;html>&lt;/html> and &lt;body>&lt;/body></p>
 </div>
 
 
