@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-08-18T14:40:35+08:00</updated>
+  <updated>2014-08-18T14:42:17+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Jaye Tan]]></name>
@@ -121,8 +121,9 @@ python manage.py startapp article
 <br />
 
 
-<p>Make views.py in apps use template
-put this on top of the page to be able to pass variables and use template</p>
+<p>Make views.py in apps use template</p>
+
+<p>put this on top of the page to be able to pass variables and use template</p>
 
 <pre>
 from django.template.loader import get_template
