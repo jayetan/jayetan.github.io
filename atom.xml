@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-08-18T14:30:54+08:00</updated>
+  <updated>2014-08-18T14:33:01+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Jaye Tan]]></name>
@@ -155,8 +155,8 @@ class articleTemplate(TemplateView):
 <p>Creating template that includes external header and footer or anything you want.
 this is usefull if you have multiple pages that has the same header and footer.</p>
 
-<p>first we create our html files, index.html, <em>header.html, and </em>footer.html
-now open up index.html, then use Include file &lsquo;&rsquo; contains invalid characters or sequences to include the other html files</p>
+<p>first we create our html files, index.html, &#95;header.html, and &#95;footer.html
+now open up index.html, then use &#123;&#37; include &#37;&#125; to include the other html files</p>
 
 <pre>
 &lt;!DOCTYPE html>
