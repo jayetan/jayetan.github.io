@@ -120,18 +120,16 @@ sudo python setup.py install
 <p>
 if it didn&rsquo;t work you can read the README.rst which can be found at the extracted django folder and read the instruction on how to install it.</p>
 
-<p>Listing all available commands</p>
-
-<p>to list all available Django commands just type</p>
+<p>Listing all available commands
+to list all available Django commands just type</p>
 
 <pre>
 django-admin.py
 </pre>
 
 
-<p>Creating django project</p>
-
-<p>just type</p>
+<p>Creating django project
+just type</p>
 
 <pre>
 django-admin.py startproject django_test
@@ -149,9 +147,8 @@ python manage.py runserver
 
 <p>this will run the django server on localhost:8000, just view it on you browser and you will able to see this line &ldquo;It worked! Congratulations on your first Django-powered page.&rdquo;</p>
 
-<p>Changing the Django default page using templates</p>
-
-<p>in settings.py add these lines</p>
+<p>Changing the Django default page using templates
+in settings.py add these lines</p>
 
 <pre>
 TEMPLATE_DIRS = (
@@ -185,9 +182,8 @@ python manage.py startapp article
 
 <p>where article is the name of the app</p>
 
-<p>make views.py in apps use template</p>
-
-<p>put this on top of the page to be able to pass variables and use template</p>
+<p>Make views.py in apps use template
+put this on top of the page to be able to pass variables and use template</p>
 
 <pre>
 from django.template.loader import get_template
@@ -206,7 +202,7 @@ def article(request):
 </pre>
 
 
-<p>the simpliest way rendering template</p>
+<p>The simpliest way rendering template</p>
 
 <pre>
 from django.shortcuts import render_to_response
@@ -222,7 +218,7 @@ def article(request):
 </pre>
 
 
-<p>rendering template via class definition (can also be used in changing django default page)
+<p>Rendering template via class definition (can also be used in changing django default page)
 assuming you have already imported TemplateView</p>
 
 <pre>
@@ -259,7 +255,7 @@ now open up index.html, then use &#123;&#37; include &#37;&#125; to include the 
 </pre>
 
 
-<p>while the <em>header and </em>footer.html can contain any html tags except for &lt;html>&lt;/html> and &lt;body>&lt;/body></p>
+<p>while the &#95;header and &#95;footer.html can contain any html tags except for &lt;html>&lt;/html> and &lt;body>&lt;/body></p>
 </div>
 
 
