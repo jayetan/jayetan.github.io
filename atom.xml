@@ -1,112 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>Jaye Tan's Octopress Blog</title>
-  <meta name="author" content="Jaye Tan">
-
-  
-  <meta name="description" content="Wordpress Permalinks 404 not found This is mainly a problems for Ubuntu users after installing the Wordpress on their localhost.
-to solve this &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://jayetan.github.io">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Jaye Tan's Octopress Blog" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-51591549-1', 'jayetan.github.io');
-  ga('send', 'pageview');
-
-</script>
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Jaye Tan's Octopress Blog</a></h1>
-  
-    <h2>Just Blogs</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:jayetan.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="http://bryangamotea.github.io/">Bryan's Blogs</a></li>
-  <li><a href="http://boinx25.github.io/">Boinx's Blogs</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
+  <link href="http://jayetan.github.io/atom.xml" rel="self"/>
+  <link href="http://jayetan.github.io/"/>
+  <updated>2014-11-19T10:37:41+08:00</updated>
+  <id>http://jayetan.github.io/</id>
+  <author>
+    <name><![CDATA[Jaye Tan]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2014/11/19/wordpress-permalinks-404-not-found/">Wordpress Permalinks 404 Not Found</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2014-11-19T10:16:36+08:00" pubdate data-updated="true">Nov 19<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Wordpress Permalinks 404 not found</p>
+  <entry>
+    <title type="html"><![CDATA[Wordpress Permalinks 404 Not Found]]></title>
+    <link href="http://jayetan.github.io/blog/2014/11/19/wordpress-permalinks-404-not-found/"/>
+    <updated>2014-11-19T10:16:36+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/11/19/wordpress-permalinks-404-not-found</id>
+    <content type="html"><![CDATA[<p>Wordpress Permalinks 404 not found</p>
 
 <p>This is mainly a problems for Ubuntu users after installing the Wordpress on their localhost.
 to solve this problem follow this instructions:</p>
@@ -158,42 +70,15 @@ sudo chown -R **yourusername** /var/www
 <code>sudo service apache2 restart</code></p>
 
 <p>you can now change your wordpress permalinks to Post name without an 404 error not found.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/15/up-and-running-with-django/">Up and Running With Django</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-15T22:55:06+08:00" pubdate data-updated="true">Aug 15<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>What is Django?</p>
+  <entry>
+    <title type="html"><![CDATA[Up and Running With Django]]></title>
+    <link href="http://jayetan.github.io/blog/2014/08/15/up-and-running-with-django/"/>
+    <updated>2014-08-15T22:55:06+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/08/15/up-and-running-with-django</id>
+    <content type="html"><![CDATA[<p>What is Django?</p>
 
 <p><a href="http://en.wikipedia.org/wiki/Django_(web_framework)">Django</a> is a free and open source web application framework, written in Python, which follows the model–view–controller architectural pattern.
 Django&rsquo;s primary goal is to ease the creation of complex, database-driven websites. Django emphasizes reusability and &ldquo;pluggability&rdquo; of components, rapid development, and the principle of don&rsquo;t repeat yourself. Python is used throughout, even for settings, files, and data models. Django also provides an optional administrative create, read, update and delete interface that is generated dynamically through introspection and configured via admin models.</p>
@@ -376,42 +261,15 @@ url(r'^admin/', include(admin.site.urls)),
 
 
 <p>after this you will now able to log in the admin page of django <a href="http://localhost:8000/admin">http://localhost:8000/admin</a></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/01/detect-mobile-tablet-orientation-using-jquery/">Detect Mobile - Tablet Orientation Using Jquery</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-01T22:34:42+08:00" pubdate data-updated="true">Aug 1<span>st</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This Javascript / Jquery code can detect mobile or tablet orientation.</p>
+  <entry>
+    <title type="html"><![CDATA[Detect Mobile - Tablet Orientation Using Jquery]]></title>
+    <link href="http://jayetan.github.io/blog/2014/08/01/detect-mobile-tablet-orientation-using-jquery/"/>
+    <updated>2014-08-01T22:34:42+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/08/01/detect-mobile-tablet-orientation-using-jquery</id>
+    <content type="html"><![CDATA[<p>This Javascript / Jquery code can detect mobile or tablet orientation.</p>
 
 <pre>
     window.addEventListener("orientationchange", function() {
@@ -423,42 +281,15 @@ url(r'^admin/', include(admin.site.urls)),
 <p>a portrait orientation will result of a value of &ldquo;0&rdquo; while landscape orientation will yield a result of &ldquo;90&rdquo; you can now use this value to create a conditional statements, this is helpful if you are creating a realtime orientation query.</p>
 
 <p><small>tags: javascript mobile orientation, javascript tablet orientation, device orientation jquery, jquery window orientation</small></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/06/30/learning-python/">Learning Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-06-30T21:12:58+08:00" pubdate data-updated="true">Jun 30<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>What is Python?</p>
+  <entry>
+    <title type="html"><![CDATA[Learning Python]]></title>
+    <link href="http://jayetan.github.io/blog/2014/06/30/learning-python/"/>
+    <updated>2014-06-30T21:12:58+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/06/30/learning-python</id>
+    <content type="html"><![CDATA[<p>What is Python?</p>
 
 <p>Python is a modern object-oriented programming language that&rsquo;s well-suited for a variety of uses, from simple scripts to complex web applications. Using third-party tools, such as Py2exe or Pyinstaller, Python code can be packaged into standalone executable programs.</p>
 
@@ -557,42 +388,15 @@ loopValue(30)
 a function can hold multiple parameter separated by commas, in this example (n) this holds the value that has been passed by calling the function &ldquo;loopValue(20), loopValue(20)&rdquo; this is a great way to reuse code preventing you to type them repeatedly.</p>
 
 <p>&lt;&mdash; TO BE CONTINUED &mdash;></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/13/creating-multiple-github-account/">Creating Multiple Github Account</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-13T14:36:52+08:00" pubdate data-updated="true">May 13<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Creating Multiple Github Account on a Single Machine<br />
+  <entry>
+    <title type="html"><![CDATA[Creating Multiple Github Account]]></title>
+    <link href="http://jayetan.github.io/blog/2014/05/13/creating-multiple-github-account/"/>
+    <updated>2014-05-13T14:36:52+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/05/13/creating-multiple-github-account</id>
+    <content type="html"><![CDATA[<p>Creating Multiple Github Account on a Single Machine<br />
 (don&rsquo;t change your default github if you have octopress site in your personal github)</p>
 
 <p>In case you already have a personal Github account and want to create a new one for your projects or your client on a single machine (computer) follow this easy steps.</p>
@@ -637,42 +441,15 @@ and the repository exists.
 </pre>
 you need to type this on the terminal <code>ssh-add ~/.ssh/id_rsa_clientName</code><br />
 <small>tags: octopress rake deploy error on multiple github accounts, github multiple accounts, Agent admitted failure to sign using the ssh key</small></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/07/installing-drupal-locally/">Installing Drupal Locally</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-07T11:39:26+08:00" pubdate data-updated="true">May 7<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Installing Drupal on Localhost</p>
+  <entry>
+    <title type="html"><![CDATA[Installing Drupal Locally]]></title>
+    <link href="http://jayetan.github.io/blog/2014/05/07/installing-drupal-locally/"/>
+    <updated>2014-05-07T11:39:26+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/05/07/installing-drupal-locally</id>
+    <content type="html"><![CDATA[<p>Installing Drupal on Localhost</p>
 
 <p>In order to run Drupal locally we must have a Server that runs Apache, Php and MySQL,
 for windows you can install software bundle called wamp
@@ -728,42 +505,15 @@ sudo chown -R **yourusername** /var/www
 and create a database for your drupal.</p>
 
 <p>then browse <a href="http://localhost/drupal">http://localhost/drupal</a> folder name ex. <a href="http://localhost/drupal-7.27">http://localhost/drupal-7.27</a> this will take you to the installation, just follow the instruction and you wil be able to install drupal.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/06/creating-grails-app/">Creating Grails App</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-06T11:52:43+08:00" pubdate data-updated="true">May 6<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Creating Grails App</p>
+  <entry>
+    <title type="html"><![CDATA[Creating Grails App]]></title>
+    <link href="http://jayetan.github.io/blog/2014/05/06/creating-grails-app/"/>
+    <updated>2014-05-06T11:52:43+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/05/06/creating-grails-app</id>
+    <content type="html"><![CDATA[<p>Creating Grails App</p>
 
 <p>Before we can create an Grails application, we need to install Java Development kit in our computer by typing
 <code>sudo apt-get install oracle-java6-installer</code>
@@ -935,42 +685,15 @@ ex. <code>books.gsp</code></p>
 
 
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/06/installing-gvm/">Installing GVM</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-06T10:06:53+08:00" pubdate data-updated="true">May 6<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Installing GVM (Grails Version Manager)</p>
+  <entry>
+    <title type="html"><![CDATA[Installing GVM]]></title>
+    <link href="http://jayetan.github.io/blog/2014/05/06/installing-gvm/"/>
+    <updated>2014-05-06T10:06:53+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/05/06/installing-gvm</id>
+    <content type="html"><![CDATA[<p>Installing GVM (Grails Version Manager)</p>
 
 <p>To install GVM we need to install Curl first via terminal <code>sudo apt-get install curl</code>
 then we could follow the instructions in the <code><a href="http://gvmtool.net/">http://gvmtool.net/</a></code></p>
@@ -1001,42 +724,15 @@ to see the list of available grails type <code>gvm list grails</code>
 if you see a note saying that your gvm is in offline mode just put it online by typing <code>gvm offline disable</code></p>
 
 <p><small>NOTE: you might think that the code I posted above is not working due to constant errors that you will receive, this is normal, I repeat the steps above numerous times before it installed perfectly, especially in installing the grails, you have to put you gvm in online mode repeatedly because it automatically turns offline when installation fails.</small></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/07/parallax-scrolling/">Parallax Scrolling</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-07T18:27:59+08:00" pubdate data-updated="true">Apr 7<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Today I created a Simple Parallax Scrolling that scrolls different elements with different speed upwards, at first it looks intimidating but its simple to create probably the most challenging part of the parallax is how you can make it scroll smoothly, but you can achieve it by using some plug-ins
+  <entry>
+    <title type="html"><![CDATA[Parallax Scrolling]]></title>
+    <link href="http://jayetan.github.io/blog/2014/04/07/parallax-scrolling/"/>
+    <updated>2014-04-07T18:27:59+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/04/07/parallax-scrolling</id>
+    <content type="html"><![CDATA[<p>Today I created a Simple Parallax Scrolling that scrolls different elements with different speed upwards, at first it looks intimidating but its simple to create probably the most challenging part of the parallax is how you can make it scroll smoothly, but you can achieve it by using some plug-ins
 These are the part of my codes:</p>
 
 <p>Html</p>
@@ -1081,121 +777,165 @@ function parallaxScroll(){
 
 
 <p>the javascript code above is enough to make a parallax scrolling if you want to animate more elements just set it&rsquo;s css rules and add that elements inside parallaxScroll function</p>
-</div>
+]]></content>
+  </entry>
   
+  <entry>
+    <title type="html"><![CDATA[Google Index]]></title>
+    <link href="http://jayetan.github.io/blog/2014/04/04/google-index/"/>
+    <updated>2014-04-04T18:28:48+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/04/04/google-index</id>
+    <content type="html"><![CDATA[<p>After making some blogs, I searched for Boinx and Bryan&rsquo;s blogs to see if Google already indexed their site by typing in the browser <code>site:<a href="http://urlOfTheSite">http://urlOfTheSite</a></code> since I&rsquo;m thinking their site is already running since Dec. 2013 it should be indexed by now, but Google bots doesn&rsquo;t able to pick thier site. so I linked their sites to my Octopress site and submitted my site to Google Index via Google Webmaster tools <code><a href="https://www.google.com/webmasters/"><a href="https://www.google.com/webmasters/">https://www.google.com/webmasters/</a></a></code> afterward I have to download the html verification file and uploaded it to my site server and click the verify button. after an hour I checked again my site and my friend&rsquo;s site and now its already indexed by Google, hoping it will gain some rankings after some time for a chance to be read by other viewers.</p>
+]]></content>
+  </entry>
   
+  <entry>
+    <title type="html"><![CDATA[Creating Static Punch Web Page]]></title>
+    <link href="http://jayetan.github.io/blog/2014/04/04/creating-static-punch-webpage/"/>
+    <updated>2014-04-04T18:17:11+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/04/04/creating-static-punch-webpage</id>
+    <content type="html"><![CDATA[<p>Installation</p>
+
+<p>Download and install Node.js: <a href="http://nodejs.org/#download"><a href="http://nodejs.org/#download">http://nodejs.org/#download</a></a>
+Using terminal, enter the following command:</p>
+
+<pre><code>sudo npm install -g punch</code></pre>
 
 
-    </article>
+<p>After the installation, create your folder by typing:</p>
+
+<pre><code>punch setup myFolderName</code></pre>
+
+
+<p>Go to the myFolderName/default directory and start the server by typing:</p>
+
+<pre><code>punch s</code></pre>
+
+
+<p>then open your browser and visit: <a href="http://localhost:9009"><a href="http://localhost:9009">http://localhost:9009</a></a></p>
+
+<p>You will now see the Punch tutorial on how to add and edit your webpage. just follow the instruction and you&rsquo;ll be able to
+create your first webpage easily</p>
+
+<hr />
+
+
+<p>Punch Structure (Folders and files)</p>
+
+<p>config.json &ndash;> this is where you can configure your punch settings.</p>
+
+<p>templates &ndash;> this where you can find the .mustache files by default is has three .mustache files:</p>
+
+<pre><code>_layout.mustache
+_header.mustahce
+_footer.mustache
+</code></pre>
+
+
+<p>you can add more if needed. here are the basic tag to include the .mustache file in one mustache file.</p>
+
+<pre><code>
+    &#123;&#123;&#62; header &#125&#125
+    &#123;&#123;&#62; home &#125&#125
+    &#123;&#123;&#62; footer &#125&#125</code>
+</pre>
+
+
+<p>this is where you can also controll your site appearance and all your assets should be place ex. css folder, images, javascript.</p>
+
+<p>output &ndash;> all the output html files, assets,images, javascript resides here you cannot modify these files since it is automatically generated.</p>
+
+<p>contents &ndash;> this is where you can add contents/pages to your sites to add just create a folder name with underscore first then the name ex. _about then inside this folder create an intro.markdown file then type or paste your contents inside it.
+you can also add contents to your site by using the shared.json file open it and add your contents ex.</p>
+
+<pre><code>"navbar": [
+        { "label": "HOME", "href": "/" },
+        { "label": "ABOUT", "href": "/about" }]</code>
+</pre>
+
+
+<p>and to include this just open your .mustache file in templates directory and use this ex. code</p>
+
+<pre><code>
+    &#60;nav>
+        &#60;ul>
+            &#123;&#123;#navbar}}
+                &#60;li>&#60;a class="navLinks" href="&#123;&#123;{href}}}">&#60;/a>&#60;/li>
+            &#123;&#123;/navbar}}
+        &#60;/ul>
+    &#60;/nav>
+</code></pre>
+
+
+<p>this will create an navigation links to your site.</p>
+
+<hr />
+
+
+<p>Problems Encountered(Ubuntu)</p>
+
+<p>If you follow the punch installation guide these are the possible errors you may encounter</p>
+
+<p>Installation &ndash;>  you will receive an error using this command <code>npm install -g punch</code>
+The solution, use <code>sudo npm install -g punch</code></p>
+
+<p>Running punch server &ndash;> if you follow the instruction <code>Go to the mysite directory and start the server: cd mysite; punch s</code> the punch server won&rsquo;t run.
+The solution, access the default folder where you can find the config.json and run <code>punch s</code> in the terminal</p>
+
+<p>Contents Rendering &lt;&ndash; if you paste a big chunck of html codes in your intro.markdown it will be generated by punch as a plain text in the output.
+The solution, use the tag with three parentheses to get the unescaped output (&#123;&#123;&#123;intro}}} instead of &#123;&#123;intro}}) or try to paste smaller pieces of html codes and refresh your browser each time.</p>
+
+<p><small>tags: ubuntu punch install, punch s error, punch render problem, ubuntu punch laktek error, punch error solutions, punch displays as plain text </small></p>
+]]></content>
+  </entry>
   
+  <entry>
+    <title type="html"><![CDATA[Creating Jekyll Static Webpage]]></title>
+    <link href="http://jayetan.github.io/blog/2014/04/02/creating-jekyll-static-webpage/"/>
+    <updated>2014-04-02T18:10:38+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/04/02/creating-jekyll-static-webpage</id>
+    <content type="html"><![CDATA[<p>How to create Jekyll Static Webpage</p>
+
+<p>First we have to install the jekyll gem by typing in the terminal
+<code>gem install jekyll</code>
+then we have to create a new folder which the jekyll will generate all the needed files and folder by typing in the terminal <code>jekyll new my-folder-name</code>
+then you can access the folder by typing <code>cd my-folder-name</code> then <code>ls</code> to see all the generated files and folders</p>
+
+<p>_includes &ndash;> this is where you will put your reusable html file (parts of your html codes)</p>
+
+<p>_layouts &ndash;> this is where you can find the default.html which will be called by the index.html (can be found at the root folder.)</p>
+
+<p>_post &ndash;> this where you can find all of your created blogs</p>
+
+<p><em>_site &ndash;> this is where you can find the generated html file which are rendered by the browser , all the contents inside here should be generated by the jekyll. To add a page inside </em>site folder we should create an html page in the root folder manually, so if we want to create contact.html it should be placed in the root folder of my-folder-name then open the contact.html and before the
+<code>
+html code block we should put
+&#8209;&#8209;&#8209;
+layout: contact
+&#8209;&#8209;&#8209;
+</code></p>
+
+<p>then on the terminal type <code>jekyll build &mdash;watch</code> this will now create contact.html in the <em>site folder and any changes will automatically update the </em>site folder and to add folder in <em>site folder same rules applies the folder should be placed at the root folder, lets say we want to create css folder it should be place in the root folder since the jekyll is running it should create the css folder in the </em>site folder if not you can type in the terminal <code>jekyll build</code></p>
+
+<p>INCLUDING REUSABLE HTML CODES</p>
+
+<p>All the includes file should be placed in the _includes to be accessible and to include this file we can add inside our html file the code <code>&#123;&#37;include &ldquo;name of the file&rdquo; param=&ldquo;value&rdquo; &#37;&#125; ex. &#123;&#37; include footer.html param=&ldquo;value&rdquo; &#37;&#125;</code></p>
+
+<p>To run the webpage locally just type <code>jekyll serve or jekyll serve &mdash;watch</code> then browse to <a href="http://localhost:4000"><a href="http://localhost:4000">http://localhost:4000</a></a></p>
+
+<p>example of the webpage I built using jekyll <a href="http://jayetan.github.io/business-sample/"><a href="http://jayetan.github.io/business-sample/">http://jayetan.github.io/business-sample/</a></a></p>
+]]></content>
+  </entry>
   
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/04/google-index/">Google Index</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+  <entry>
+    <title type="html"><![CDATA[Just Finished Setting Up My Octopress Blog]]></title>
+    <link href="http://jayetan.github.io/blog/2014/03/27/just-finished-setting-up-my-octopress-blog/"/>
+    <updated>2014-03-27T18:05:51+08:00</updated>
+    <id>http://jayetan.github.io/blog/2014/03/27/just-finished-setting-up-my-octopress-blog</id>
+    <content type="html"><![CDATA[<p>Adding this page content was not really easy for me probably because I really don&rsquo;t read the documentation, I was relying on experimentationand testing, I thought pushing new contents was same as in github using
+<code>git add. git commit and git push</code> Octopress is different you have to use <code>rake generate and rake deploy</code> to update your contents.
+Sometime this week I&rsquo;ll be adding more pages for my blogs about what I have learned from this wonderfull company from the day I start training, I couldn&rsquo;t really remember when is the day I started but its before Feb. 26 so I could say that I&rsquo;ve training for one month now and so far it really helps me to learn the things I need to learn.</p>
+]]></content>
+  </entry>
   
-
-
-<time datetime="2014-04-04T18:28:48+08:00" pubdate data-updated="true">Apr 4<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After making some blogs, I searched for Boinx and Bryan&rsquo;s blogs to see if Google already indexed their site by typing in the browser <code>site:<a href="http://urlOfTheSite">http://urlOfTheSite</a></code> since I&rsquo;m thinking their site is already running since Dec. 2013 it should be indexed by now, but Google bots doesn&rsquo;t able to pick thier site. so I linked their sites to my Octopress site and submitted my site to Google Index via Google Webmaster tools <code><a href="https://www.google.com/webmasters/"><a href="https://www.google.com/webmasters/">https://www.google.com/webmasters/</a></a></code> afterward I have to download the html verification file and uploaded it to my site server and click the verify button. after an hour I checked again my site and my friend&rsquo;s site and now its already indexed by Google, hoping it will gain some rankings after some time for a chance to be read by other viewers.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2014/11/19/wordpress-permalinks-404-not-found/">Wordpress Permalinks 404 Not Found</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/08/15/up-and-running-with-django/">Up and Running With Django</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/08/01/detect-mobile-tablet-orientation-using-jquery/">Detect Mobile - Tablet Orientation Using Jquery</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/06/30/learning-python/">Learning Python</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/13/creating-multiple-github-account/">Creating Multiple Github Account</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Jaye Tan -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>
