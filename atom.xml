@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-11-19T10:44:26+08:00</updated>
+  <updated>2014-11-19T10:45:25+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Jaye Tan]]></name>
@@ -26,7 +26,7 @@ to solve this problem follow this instructions:</p>
 <p>Using Terminal</p>
 
 <p>first allow overides on your apache
-<code>sudo gedit /etc/apache2/apache2.conf<code>
+<code>sudo gedit /etc/apache2/apache2.conf</code>
 and find all &lt;Directory /> &lt;/Directory> and paste this code in between in all of that tag
 <code></p>
 
