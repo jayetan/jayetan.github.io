@@ -9,8 +9,7 @@
   <meta name="author" content="Jaye Tan">
 
   
-  <meta name="description" content="Wordpress Permalinks 404 not found This is mainly a problems for Ubuntu users after installing the Wordpress on their localhost.
-to solve this &hellip;">
+  <meta name="description" content="Today I tried uploading underscore theme to my computer&rsquo;s localhost server, I tried to unzipped it and paste it directly on my wordpress theme &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +76,43 @@ to solve this &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/11/20/ftp-info-on-uploading-themes-in-wordpress-on-localhost/">Ftp Info on Uploading Themes in Wordpress on Localhost</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-20T12:23:55+08:00" pubdate data-updated="true">Nov 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today I tried uploading underscore theme to my computer&rsquo;s localhost server, I tried to unzipped it and paste it directly on my wordpress theme directory, but does&rsquo;t shows up on wordpress theme dashboard, so I decided to install it via worpress theme installation, but came across in this wierd ftp connection info that I need to provide, it is bizzar because I&rsquo;m only working on my localhost so ftp info is not necessary. I fixed it by adding
+<code>define(&lsquo;FS_METHOD&rsquo;, &lsquo;direct&rsquo;);</code> on wordpress wp-config.php which can be found on the root folder of wordpress. by the way I&rsquo;m using ubuntu, this might not show if you are using windows machine.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1090,42 +1126,6 @@ function parallaxScroll(){
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/04/google-index/">Google Index</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-04T18:28:48+08:00" pubdate data-updated="true">Apr 4<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After making some blogs, I searched for Boinx and Bryan&rsquo;s blogs to see if Google already indexed their site by typing in the browser <code>site:<a href="http://urlOfTheSite">http://urlOfTheSite</a></code> since I&rsquo;m thinking their site is already running since Dec. 2013 it should be indexed by now, but Google bots doesn&rsquo;t able to pick thier site. so I linked their sites to my Octopress site and submitted my site to Google Index via Google Webmaster tools <code><a href="https://www.google.com/webmasters/"><a href="https://www.google.com/webmasters/">https://www.google.com/webmasters/</a></a></code> afterward I have to download the html verification file and uploaded it to my site server and click the verify button. after an hour I checked again my site and my friend&rsquo;s site and now its already indexed by Google, hoping it will gain some rankings after some time for a chance to be read by other viewers.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1141,6 +1141,10 @@ function parallaxScroll(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/11/20/ftp-info-on-uploading-themes-in-wordpress-on-localhost/">Ftp Info on Uploading Themes in Wordpress on Localhost</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/11/19/wordpress-permalinks-404-not-found/">Wordpress Permalinks 404 Not Found</a>
       </li>
     
@@ -1154,10 +1158,6 @@ function parallaxScroll(){
     
       <li class="post">
         <a href="/blog/2014/06/30/learning-python/">Learning Python</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/13/creating-multiple-github-account/">Creating Multiple Github Account</a>
       </li>
     
   </ul>

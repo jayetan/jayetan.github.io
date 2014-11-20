@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Parallax Scrolling - Jaye Tan's Octopress Blog</title>
+  <title>Ftp Info on Uploading Themes in Wordpress on Localhost - Jaye Tan's Octopress Blog</title>
   <meta name="author" content="Jaye Tan">
 
   
-  <meta name="description" content="Today I created a Simple Parallax Scrolling that scrolls different elements with different speed upwards, at first it looks intimidating but its &hellip;">
+  <meta name="description" content="Today I tried uploading underscore theme to my computer&rsquo;s localhost server, I tried to unzipped it and paste it directly on my wordpress theme &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jayetan.github.io/blog/2014/04/07/parallax-scrolling">
+  <link rel="canonical" href="http://jayetan.github.io/blog/2014/11/20/ftp-info-on-uploading-themes-in-wordpress-on-localhost">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Jaye Tan's Octopress Blog" type="application/atom+xml">
@@ -79,7 +79,7 @@
   
   <header>
     
-      <h1 class="entry-title">Parallax Scrolling</h1>
+      <h1 class="entry-title">Ftp Info on Uploading Themes in Wordpress on Localhost</h1>
     
     
       <p class="meta">
@@ -95,58 +95,15 @@
   
 
 
-<time datetime="2014-04-07T18:27:59+08:00" pubdate data-updated="true">Apr 7<span>th</span>, 2014</time>
+<time datetime="2014-11-20T12:23:55+08:00" pubdate data-updated="true">Nov 20<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Today I created a Simple Parallax Scrolling that scrolls different elements with different speed upwards, at first it looks intimidating but its simple to create probably the most challenging part of the parallax is how you can make it scroll smoothly, but you can achieve it by using some plug-ins
-These are the part of my codes:</p>
-
-<p>Html</p>
-
-<pre>
-&#60;div class="small-clouds-layer">
-    &#60;img src="blue-clouds-1.png" class="small-1">
-    &#60;img src="blue-clouds-3.png" class="small-3">
-&#60;/div>
-</pre>
-
-
-<p>Css</p>
-
-<pre>
-.small-clouds-layer{
-    position: absolute;
-    top: 600px;
-    width: 100%;
-}
-.small-1{
-    margin-left: 300px;
-}
-.small-3{
-    margin-left: 300px;
-}
-</pre>
-
-
-<p>Javascript</p>
-
-<pre>
-$(window).bind('scroll',function(e){
-    parallaxScroll();
-});
-
-function parallaxScroll(){
-    var scrolled = $(window).scrollTop();
-    $('.small-clouds-layer').css('top',(600-(scrolled*.5))+'px');
-}
-</pre>
-
-
-<p>the javascript code above is enough to make a parallax scrolling if you want to animate more elements just set it&rsquo;s css rules and add that elements inside parallaxScroll function</p>
+<div class="entry-content"><p>Today I tried uploading underscore theme to my computer&rsquo;s localhost server, I tried to unzipped it and paste it directly on my wordpress theme directory, but does&rsquo;t shows up on wordpress theme dashboard, so I decided to install it via worpress theme installation, but came across in this wierd ftp connection info that I need to provide, it is bizzar because I&rsquo;m only working on my localhost so ftp info is not necessary. I fixed it by adding
+<code>define(&lsquo;FS_METHOD&rsquo;, &lsquo;direct&rsquo;);</code> on wordpress wp-config.php which can be found on the root folder of wordpress. by the way I&rsquo;m using ubuntu, this might not show if you are using windows machine.</p>
 </div>
 
 
@@ -169,7 +126,7 @@ function parallaxScroll(){
   
 
 
-<time datetime="2014-04-07T18:27:59+08:00" pubdate data-updated="true">Apr 7<span>th</span>, 2014</time>
+<time datetime="2014-11-20T12:23:55+08:00" pubdate data-updated="true">Nov 20<span>th</span>, 2014</time>
       
 
 
@@ -177,7 +134,7 @@ function parallaxScroll(){
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://jayetan.github.io/blog/2014/04/07/parallax-scrolling/" data-via="" data-counturl="http://jayetan.github.io/blog/2014/04/07/parallax-scrolling/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://jayetan.github.io/blog/2014/11/20/ftp-info-on-uploading-themes-in-wordpress-on-localhost/" data-via="" data-counturl="http://jayetan.github.io/blog/2014/11/20/ftp-info-on-uploading-themes-in-wordpress-on-localhost/" >Tweet</a>
   
   
   
@@ -186,10 +143,8 @@ function parallaxScroll(){
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/04/04/google-index/" title="Previous Post: Google index">&laquo; Google index</a>
+        <a class="basic-alignment left" href="/blog/2014/11/19/wordpress-permalinks-404-not-found/" title="Previous Post: Wordpress Permalinks 404 not found">&laquo; Wordpress Permalinks 404 not found</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/05/06/installing-gvm/" title="Next Post: Installing GVM">Installing GVM &raquo;</a>
       
     </p>
   </footer>
