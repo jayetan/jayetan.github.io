@@ -4,7 +4,7 @@
   <title><![CDATA[Jaye Tan's Octopress Blog]]></title>
   <link href="http://jayetan.github.io/atom.xml" rel="self"/>
   <link href="http://jayetan.github.io/"/>
-  <updated>2014-11-20T13:59:50+08:00</updated>
+  <updated>2014-12-11T17:06:16+08:00</updated>
   <id>http://jayetan.github.io/</id>
   <author>
     <name><![CDATA[Jaye Tan]]></name>
@@ -79,6 +79,9 @@ sudo chown -R **yourusername** /var/www
 </code></pre>
 
 <p></code></p>
+
+<p>then type this in your terminal
+<code>sudo a2enmod setenvif headers deflate filter expires rewrite include</code></p>
 
 <p>then refresh the apache by:
 <code>sudo service apache2 restart</code></p>
